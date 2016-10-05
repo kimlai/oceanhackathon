@@ -1,0 +1,76 @@
+* {
+    font-family: "proxima-nova";
+    color: rgb(12, 32, 68);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(189, 236, 239);
+}
+
+#app {
+}
+
+.search-form {
+    text-align: center;
+    margin-top: 10%;
+}
+
+input {
+    padding: 6px;
+    font-family: "proxima-nova";
+    font-size: 18px;
+}
+
+button {
+    background-color: rgb(238, 89, 73);
+    color: white;
+    padding: 8px 24px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}
+
+.geosuggest {
+    display: inline-block;
+    position: relative;
+}
+
+.geosuggest__suggests-wrapper {
+    position: absolute;
+    text-align: left;
+}
+
+.geosuggest__suggests {
+    margin: 0;
+}
+
+.geosuggest__input {
+    width: 400px;
+}
+
+.geosuggest-item {
+    cursor: pointer;
+    padding: 12px;
+    background-color: rgb(250, 250, 250);
+    border-top: 1px solid rgb(230, 230, 230);
+}
+.geosuggest-item:hover {
+    background-color: rgb(238, 89, 73);
+    color: white;
+}
+
+.geosuggest__suggests--hidden {
+    max-height: 0;
+    overflow: hidden;
+    border-width: 0;
+}
+
+#map {
+    height: 500px;
+    width: 70%;
+}
