@@ -58,7 +58,10 @@ class App extends Component {
                                 onChange={this.onWhenSelected.bind(this)}
                             />
                         </div>
-                        <button onClick={this.onSearch.bind(this)}>
+                        <button
+                            onClick={this.onSearch.bind(this)}
+                            disabled={!(this.state.when && this.state.location)}
+                        >
                             Rechercher
                         </button>
                     </div>

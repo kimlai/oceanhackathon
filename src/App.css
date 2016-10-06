@@ -78,6 +78,10 @@ button {
     cursor: pointer;
 }
 
+button:disabled {
+    opacity: 0.75;
+}
+
 .geosuggest__suggests-wrapper {
     position: absolute;
     text-align: left;
