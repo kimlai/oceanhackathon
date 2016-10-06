@@ -3,6 +3,13 @@ var _ = require('lodash');
 import TideChart from './TideChart';
 
 class SearchResult extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            bounds: null,
+        };
+    }
+
     componentWillMount() {
         const position = this.props.location.location;
         const locations = groupByLocation(this.props.searchResults);
@@ -10,24 +17,39 @@ class SearchResult extends Component {
         mapContainer.id = 'map-container';
         mapContainer.style.height = window.innerHeight + 'px';
         document.body.appendChild(mapContainer);
-        const mymap = window.L.map('map-container').setView(position, 13);
+        const map = window.L.map('map-container').setView(position, 13);
         window.L.tileLayer(
             'https://api.mapbox.com/styles/v1/kimlai/city4g5cd00b22iqiwvyfdlv4/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoia2ltbGFpIiwiYSI6ImNpdHg4b3psMDAwMnAzd29hZ2VrbzVmeTcifQ.JEzjYNojtEPRBove3beibA',
             { maxZoom: 18 })
-        .addTo(mymap);
+        .addTo(map);
         locations.forEach(function (location) {
             const marker = window.L.marker(location.location)
             marker.bindPopup(location.species.join(', ')).openPopup();
-            marker.addTo(mymap);
+            marker.addTo(map);
+        });
+        map.on('moveend', () => {
+            this.setState({ bounds: map.getBounds() });
+        });
+        map.once('load', () => {
+            this.setState({ bounds: map.getBounds() });
         });
     }
+
     render() {
+        const inBounds = _.filter(this.props.searchResults, (result) => {
+            if (!this.state.bounds) {
+                return true;
+            }
+            return this.state.bounds.contains(
+                window.L.latLng(result.location)
+            );
+        });
         return (
             <div className='search-result'>
                 <div>{this.props.location.label}</div>
                 <div>{this.props.when.label}</div>
                 <div className='species'>
-                    {groupBySpecies(this.props.searchResults).map(function (result) {
+                    {groupBySpecies(inBounds).map(function (result) {
                         return <div key={result.species}>{result.species}</div>;
                     })}
                 </div>
