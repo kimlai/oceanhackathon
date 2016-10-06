@@ -121,6 +121,10 @@ button:disabled {
     padding: 48px;
 }
 
+.tide-chart .recharts-wrapper{
+    margin-left: -48px;
+}
+
 #map-container {
     position: fixed;
     top: 0;

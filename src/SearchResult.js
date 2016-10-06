@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 var _ = require('lodash');
+import TideChart from './TideChart';
 
 class SearchResult extends Component {
     componentWillMount() {
@@ -30,6 +31,7 @@ class SearchResult extends Component {
                         return <div key={result.species}>{result.species}</div>;
                     })}
                 </div>
+                <TideChart />
             </div>
         );
     }
