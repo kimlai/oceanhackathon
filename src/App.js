@@ -3,6 +3,7 @@ import Geosuggest from 'react-geosuggest';
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
 import './App.css';
+import SearchResult from './SearchResult';
 
 class App extends Component {
     constructor(props) {
@@ -17,7 +18,7 @@ class App extends Component {
     onLocationSelected(suggestion) {
         this.setState({
             location: {
-                coordinates: suggestion.location,
+                location: suggestion.location,
                 label: suggestion.label
             }
         });
@@ -63,15 +64,41 @@ class App extends Component {
                     </div>
                );
             case 'searchResult':
-                return (
-                    <div className='search-result'>
-                        <div>{this.state.location.label}</div>
-                        <div>{this.state.when.label}</div>
-                    </div>
-                );
+                return <SearchResult
+                    location={this.state.location}
+                    when={this.state.when}
+                    searchResults={this.fakeSearchResults()}
+                />
             default:
                 return null;
         }
+    }
+
+    fakeSearchResults() {
+        const searchResults =
+            [ { species: 'poulpe'
+              , date: '23 Octobre'
+              , location: [48.473, -4.741]
+              }
+            , { species: 'poulpe'
+              , date: '15 Octobre'
+              , location: [48.477, -4.749]
+              }
+            , { species: 'crevette grise'
+              , date: '23 Octobre'
+              , location: [48.472, -4.742]
+              }
+            , { species: 'telline'
+              , date: '15 Octobre'
+              , location: [48.471, -4.745]
+              }
+            , { species: 'moule'
+              , date: '15 Octobre'
+              , location: [48.471, -4.745]
+              }
+            ];
+
+        return searchResults;
     }
 }
 
