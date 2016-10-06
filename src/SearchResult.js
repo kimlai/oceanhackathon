@@ -11,8 +11,8 @@ class SearchResult extends Component {
         document.body.appendChild(mapContainer);
         const mymap = window.L.map('map-container').setView(position, 13);
         window.L.tileLayer(
-            'https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v10/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoia2ltbGFpIiwiYSI6ImNpdHg4b3psMDAwMnAzd29hZ2VrbzVmeTcifQ.JEzjYNojtEPRBove3beibA',
-            { maxZoom: 18 })
+            'https://api.mapbox.com/styles/v1/mapbox/outdoors-v10/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoia2ltbGFpIiwiYSI6ImNpdHg4b3psMDAwMnAzd29hZ2VrbzVmeTcifQ.JEzjYNojtEPRBove3beibA',
+            { maxZoom: 18, detectRetina: true })
         .addTo(mymap);
         locations.forEach(function (location) {
             const marker = window.L.marker(location.location)
