@@ -30,9 +30,32 @@ class SearchResult extends Component {
         map.on('moveend', () => {
             this.setState({ bounds: map.getBounds() });
         });
-        map.once('load', () => {
+        map.whenReady(() => {
             this.setState({ bounds: map.getBounds() });
         });
+        this.map = map;
+    }
+
+    moveToLanildut() {
+        this.map.setView([48.473, -4.745], 13);
+    }
+
+    renderSpecies(species) {
+        let result;
+        if (species.length === 0) {
+            result = <div>
+                Rien à pêcher par ici, essayez à <a onClick={this.moveToLanildut.bind(this)} href="#">Lanildut</a>
+            </div>;
+        } else {
+            result = groupBySpecies(species).map(function (result) {
+                return <div key={result.species}>{result.species}</div>;
+            });
+        }
+        return (
+            <div className='species'>
+                {result}
+            </div>
+        );
     }
 
     render() {
@@ -48,11 +71,7 @@ class SearchResult extends Component {
             <div className='search-result'>
                 <div>{this.props.location.label}</div>
                 <div>{this.props.when.label}</div>
-                <div className='species'>
-                    {groupBySpecies(inBounds).map(function (result) {
-                        return <div key={result.species}>{result.species}</div>;
-                    })}
-                </div>
+                {this.renderSpecies(inBounds)}
                 <TideChart />
             </div>
         );
