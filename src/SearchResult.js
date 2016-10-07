@@ -9,12 +9,30 @@ class SearchResult extends Component {
         this.state = {
             bounds: null,
             groupingCriteria: 'date',
+            where: {
+                location: {
+                    lat: props.params.whereLat,
+                    lng: props.params.whereLng,
+                },
+                label: props.params.whereLabel
+            },
+            when: {
+                value: props.params.whenValue,
+                label: props.params.whenLabel,
+            },
+            searchResults: this.fakeSearchResults(),
         };
     }
 
+    componentWillUnmount() {
+        this.map.remove();
+        const mapElement = document.getElementById('map-container');
+        mapElement.remove();
+    }
+
     componentWillMount() {
-        const position = this.props.where.location;
-        const locations = groupByLocation(this.props.searchResults);
+        const position = this.state.where.location;
+        const locations = groupByLocation(this.state.searchResults);
         const mapContainer = document.createElement('div');
         mapContainer.id = 'map-container';
         mapContainer.style.height = window.innerHeight + 'px';
@@ -94,7 +112,7 @@ class SearchResult extends Component {
     }
 
     render() {
-        const inBounds = _.filter(this.props.searchResults, (result) => {
+        const inBounds = _.filter(this.state.searchResults, (result) => {
             if (!this.state.bounds) {
                 return true;
             }
@@ -105,8 +123,8 @@ class SearchResult extends Component {
         return (
             <div className='search-result-container'>
                 <div>
-                    <div>{this.props.where.label}</div>
-                    <div>{this.props.when.label}</div>
+                    <div>{this.state.where.label}</div>
+                    <div>{this.state.when.label}</div>
                 </div>
                 <div>
                     <div className={classNames('grouping-criteria', { 'grouping-criteria--active': this.state.groupingCriteria === 'date' })}
@@ -119,6 +137,33 @@ class SearchResult extends Component {
                 {this.renderSearchResult(inBounds, this.state.groupingCriteria)}
             </div>
         );
+    }
+
+    fakeSearchResults() {
+        const searchResults =
+            [ { species: 'palourde'
+              , date: '23 Octobre'
+              , location: [48.473, -4.741]
+              }
+            , { species: 'palourde'
+              , date: '15 Octobre'
+              , location: [48.477, -4.749]
+              }
+            , { species: 'crevette grise'
+              , date: '23 Octobre'
+              , location: [48.472, -4.742]
+              }
+            , { species: 'telline'
+              , date: '15 Octobre'
+              , location: [48.471, -4.745]
+              }
+            , { species: 'moule'
+              , date: '15 Octobre'
+              , location: [48.471, -4.745]
+              }
+            ];
+
+        return searchResults;
     }
 }
 
@@ -165,6 +210,7 @@ function groupByDate(results) {
         return acc;
     }, []);
 }
+
 function groupByLocation(results) {
     return _.reduce(results, function (acc, result) {
         const species = result.species;
