@@ -13,7 +13,6 @@ class TideChart extends Component {
         ];
         return (
             <div className='tide-chart'>
-                <h4>Marée</h4>
                 <LineChart
                     width={200}
                     height={200}

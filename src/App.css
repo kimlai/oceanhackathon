@@ -141,12 +141,70 @@ button:disabled {
  * SEARCH RESULT
  *******************/
 
-.search-result {
+.search-result-container {
     padding: 48px;
+    width: 50%;
+}
+
+@media screen and (max-width: 400px) {
+    .search-result-container {
+        width: 100%;
+    }
+}
+
+.search-result {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 400px) {
+    .search-result {
+        flex-direction: column;
+    }
+}
+
+.search-result-item {
+    background: white;
+    padding: 12px;
+    min-width: 45%;
+    margin-top: 24px;
+    margin-right: 24px;
+}
+
+.search-result-item-title {
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+@media screen and (max-width: 400px) {
+    .search-result-item {
+        width: 100%;
+    }
+}
+
+.search-result-item-title {
+    text-transform: uppercase;
+}
+
+.grouping-criteria {
+    padding: 6px;
+    margin: 18px 6px 6px 0px;
+    cursor: pointer;
+    border: 1px solid rgb(12, 32, 68);
+    display: inline-block;
+    color: rgb(50, 50, 50);
+    font-size: 14px;
+}
+
+.grouping-criteria--active {
+    background-color: rgb(12, 32, 68);
+    color: white;
+    border: 1px solid rgb(12, 32, 68);
 }
 
 .tide-chart .recharts-wrapper{
-    margin-left: -48px;
+    margin-top: 24px;
 }
 
 #map-container {

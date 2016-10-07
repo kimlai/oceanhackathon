@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import classNames from 'classnames';
 var _ = require('lodash');
 import TideChart from './TideChart';
 
@@ -7,6 +8,7 @@ class SearchResult extends Component {
         super(props);
         this.state = {
             bounds: null,
+            groupingCriteria: 'date',
         };
     }
 
@@ -40,22 +42,55 @@ class SearchResult extends Component {
         this.map.setView([48.473, -4.745], 13);
     }
 
-    renderSpecies(species) {
+    groupBy(criteria) {
+        this.setState({ groupingCriteria: criteria });
+    }
+
+    renderSearchResult(searchResult, groupingCriteria) {
         let result;
-        if (species.length === 0) {
+        if (searchResult.length === 0) {
             result = <div>
                 Rien à pêcher par ici, essayez à <a onClick={this.moveToLanildut.bind(this)} href="#">Lanildut</a>
             </div>;
         } else {
-            result = groupBySpecies(species).map(function (result) {
-                return <div key={result.species}>{result.species}</div>;
-            });
+            if (groupingCriteria === 'date') {
+                result = this.renderByDate(groupByDate(searchResult));
+            } else {
+                result = this.renderBySpecies(groupBySpecies(searchResult));
+            }
         }
         return (
-            <div className='species'>
+            <div className='search-result'>
                 {result}
             </div>
         );
+    }
+
+    renderBySpecies(species) {
+        return species.map(function (result) {
+            return <div key={result.species} className='search-result-item'>
+                <div className='search-result-item-title'>{result.species}</div>
+                <div className='species-dates'>
+                    {result.dates.map(function (date) {
+                        return <div key={date}>{date}</div>;
+                    })}
+                </div>
+            </div>;
+        });
+    }
+
+    renderByDate(dates) {
+        return dates.map(function (result) {
+            return <div key={result.date} className='search-result-item'>
+                <div className='search-result-item-title'>{result.date}</div>
+                <div className='date-species'>
+                    {result.species.map(function (speciesName) {
+                        return <div key={speciesName}>{speciesName}</div>;
+                    })}
+                </div>
+                <TideChart />
+            </div>;
+        });
     }
 
     render() {
@@ -68,11 +103,20 @@ class SearchResult extends Component {
             );
         });
         return (
-            <div className='search-result'>
-                <div>{this.props.location.label}</div>
-                <div>{this.props.when.label}</div>
-                {this.renderSpecies(inBounds)}
-                <TideChart />
+            <div className='search-result-container'>
+                <div>
+                    <div>{this.props.location.label}</div>
+                    <div>{this.props.when.label}</div>
+                </div>
+                <div>
+                    <div className={classNames('grouping-criteria', { 'grouping-criteria--active': this.state.groupingCriteria === 'date' })}
+                        onClick={() => this.groupBy('date')}
+                    >Par date</div>
+                    <div className={classNames('grouping-criteria', { 'grouping-criteria--active': this.state.groupingCriteria === 'species' })}
+                        onClick={() => this.groupBy('species')}
+                    >Par espèce</div>
+                </div>
+                {this.renderSearchResult(inBounds, this.state.groupingCriteria)}
             </div>
         );
     }
@@ -100,6 +144,27 @@ function groupBySpecies(results) {
     }, []);
 }
 
+function groupByDate(results) {
+    return _.reduce(results, function (acc, result) {
+        const species = result.species;
+        const date = result.date;
+        const location = result.location;
+        const existingResult = _.find(acc, function (result) {
+            return result.date === date;
+        });
+        if (existingResult) {
+            existingResult.species.push(species);
+            existingResult.locations.push(location);
+        } else {
+            acc.push({
+                date: date,
+                species: [species],
+                locations: [location],
+            });
+        }
+        return acc;
+    }, []);
+}
 function groupByLocation(results) {
     return _.reduce(results, function (acc, result) {
         const species = result.species;

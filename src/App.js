@@ -79,11 +79,11 @@ class App extends Component {
 
     fakeSearchResults() {
         const searchResults =
-            [ { species: 'poulpe'
+            [ { species: 'palourde'
               , date: '23 Octobre'
               , location: [48.473, -4.741]
               }
-            , { species: 'poulpe'
+            , { species: 'palourde'
               , date: '15 Octobre'
               , location: [48.477, -4.749]
               }
