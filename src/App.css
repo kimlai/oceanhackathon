@@ -26,8 +26,23 @@ body {
     margin-top: 10%;
 }
 
+@media screen and (max-width: 400px) {
+    .search-form {
+        flex-direction: column;
+    }
+    .search-form > *{
+        margin: 6px;
+    }
+}
+
 .search-when {
     width: 280px;
+}
+
+@media screen and (max-width: 400px) {
+    .search-when {
+        width: 100%;
+    }
 }
 
 .Select {
@@ -85,6 +100,7 @@ button:disabled {
 .geosuggest__suggests-wrapper {
     position: absolute;
     text-align: left;
+    z-index: 999;
 }
 
 .geosuggest__suggests {
@@ -93,6 +109,12 @@ button:disabled {
 
 .geosuggest__input {
     width: 400px;
+}
+
+@media screen and (max-width: 400px) {
+    .geosuggest__input {
+        width: 100%;
+    }
 }
 
 .geosuggest-item {
