@@ -13,7 +13,7 @@ class SearchResult extends Component {
     }
 
     componentWillMount() {
-        const position = this.props.location.location;
+        const position = this.props.where.location;
         const locations = groupByLocation(this.props.searchResults);
         const mapContainer = document.createElement('div');
         mapContainer.id = 'map-container';
@@ -105,7 +105,7 @@ class SearchResult extends Component {
         return (
             <div className='search-result-container'>
                 <div>
-                    <div>{this.props.location.label}</div>
+                    <div>{this.props.where.label}</div>
                     <div>{this.props.when.label}</div>
                 </div>
                 <div>
