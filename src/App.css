@@ -156,3 +156,11 @@ button:disabled {
     width: 50%;
     float: right;
 }
+
+@media screen and (max-width: 400px) {
+    #map-container {
+        display: block;
+        width: 100%;
+        position: relative;
+    }
+}
