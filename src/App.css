@@ -2,6 +2,7 @@
     font-family: "proxima-nova";
     color: rgb(12, 32, 68);
     font-size: 18px;
+    box-sizing: border-box;
 }
 
 ul {
@@ -28,10 +29,11 @@ body {
 
 @media screen and (max-width: 400px) {
     .search-form {
+        padding: 12px;
         flex-direction: column;
     }
     .search-form > *{
-        margin: 6px;
+        margin-bottom: 12px;
     }
 }
 
