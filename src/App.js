@@ -4,6 +4,7 @@ import 'react-select/dist/react-select.css';
 import './App.css';
 import Search from './Search';
 import SearchResult from './SearchResult';
+import Planning from './Planning';
 
 class App extends Component {
     constructor(props) {
@@ -25,6 +26,10 @@ class App extends Component {
                 <Route
                     path='/search/:whereLat/:whereLng/:whereLabel/:whenLabel/:whenValue'
                     component={SearchResult}
+                />
+                <Route
+                    path='/planned'
+                    component={Planning}
                 />
             </Router>
         );

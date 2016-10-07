@@ -4,6 +4,10 @@ var _ = require('lodash');
 import TideChart from './TideChart';
 
 class SearchResult extends Component {
+    static contextTypes = {
+        router: React.PropTypes.object
+    }
+
     constructor(props) {
         super(props);
         this.state = {
@@ -60,6 +64,10 @@ class SearchResult extends Component {
         this.map.setView([48.473, -4.745], 13);
     }
 
+    planFishingTrip() {
+        this.context.router.push('/planned');
+    }
+
     groupBy(criteria) {
         this.setState({ groupingCriteria: criteria });
     }
@@ -98,17 +106,31 @@ class SearchResult extends Component {
     }
 
     renderByDate(dates) {
-        return dates.map(function (result) {
+        return dates.map((result) => {
             return <div key={result.date} className='search-result-item'>
                 <div className='search-result-item-title'>{result.date}</div>
                 <div className='date-species'>
-                    {result.species.map(function (speciesName) {
-                        return <div key={speciesName}>{speciesName}</div>;
-                    })}
+                    {result.species.join(', ')}
                 </div>
                 <TideChart />
+                <button
+                    className='plan'
+                    onClick={this.planFishingTrip.bind(this)}
+                >
+                    Planifier une sortie
+                </button>
             </div>;
         });
+    }
+
+    renderGroupingCriteria(criteria, label) {
+        return (
+            <div className={classNames(
+                'grouping-criteria', { 'grouping-criteria--active': this.state.groupingCriteria === criteria }
+                )}
+                onClick={() => this.groupBy(criteria)}
+            >Par {label}</div>
+        );
     }
 
     render() {
@@ -127,12 +149,8 @@ class SearchResult extends Component {
                     <div>{this.state.when.label}</div>
                 </div>
                 <div>
-                    <div className={classNames('grouping-criteria', { 'grouping-criteria--active': this.state.groupingCriteria === 'date' })}
-                        onClick={() => this.groupBy('date')}
-                    >Par date</div>
-                    <div className={classNames('grouping-criteria', { 'grouping-criteria--active': this.state.groupingCriteria === 'species' })}
-                        onClick={() => this.groupBy('species')}
-                    >Par espèce</div>
+                    {this.renderGroupingCriteria('date', 'date')}
+                    {this.renderGroupingCriteria('species', 'espèce')}
                 </div>
                 {this.renderSearchResult(inBounds, this.state.groupingCriteria)}
             </div>

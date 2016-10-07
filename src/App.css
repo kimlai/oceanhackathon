@@ -207,6 +207,10 @@ button:disabled {
     margin-top: 24px;
 }
 
+.plan {
+    width: 100%;
+}
+
 #map-container {
     position: fixed;
     top: 0;
