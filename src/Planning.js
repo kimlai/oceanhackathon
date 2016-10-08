@@ -19,9 +19,10 @@ class Planning extends Component {
             );
         }
         return planning.map((entry) => {
-            return <div key={entry.date} className='entry'>
-                <div>{entry.date}</div>
+            return <div key={entry.date} className='planning-entry'>
+                <div className='date'>{entry.date}</div>
                 <div>{entry.location.label}</div>
+                <button>Voir</button>
             </div>;
         });
     }
@@ -29,7 +30,7 @@ class Planning extends Component {
     render() {
         return (
             <div className='planning-container'>
-                <header>Mes sorties</header>
+                <header>Mes sorties prévues</header>
                 {this.renderPlanning(this.state.planning)}
             </div>
         );
