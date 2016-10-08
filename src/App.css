@@ -152,7 +152,12 @@ button:disabled {
     }
 }
 
-.search-result {
+.empty-search-result {
+    padding-top: 72px;
+    text-align: center;
+}
+
+.search-results {
     display: flex;
     flex-wrap: wrap;
 }

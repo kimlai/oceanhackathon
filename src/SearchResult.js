@@ -92,21 +92,30 @@ class SearchResult extends Component {
     }
 
     renderSearchResult(searchResult, groupingCriteria) {
-        let result;
         if (searchResult.length === 0) {
-            result = <div>
-                Rien à pêcher par ici, essayez à <a onClick={this.moveToLanildut.bind(this)} href="#">Lanildut</a>
-            </div>;
+            return (
+                <div className='search-result'>
+                    <div className='empty-search-result'>
+                        Rien à pêcher par ici, essayez à <a onClick={this.moveToLanildut.bind(this)} href="#">Lanildut</a>
+                    </div>
+                </div>
+            );
+        }
+        let result;
+        if (groupingCriteria === 'date') {
+            result = this.renderByDate(groupByDate(searchResult));
         } else {
-            if (groupingCriteria === 'date') {
-                result = this.renderByDate(groupByDate(searchResult));
-            } else {
-                result = this.renderBySpecies(groupBySpecies(searchResult));
-            }
+            result = this.renderBySpecies(groupBySpecies(searchResult));
         }
         return (
             <div className='search-result'>
-                {result}
+                <div>
+                    {this.renderGroupingCriteria('date', 'date')}
+                    {this.renderGroupingCriteria('species', 'espèce')}
+                </div>
+                <div className='search-results'>
+                    {result}
+                </div>
             </div>
         );
     }
@@ -166,10 +175,6 @@ class SearchResult extends Component {
                 <div>
                     <div>{this.state.where.label}</div>
                     <div>{this.state.when.label}</div>
-                </div>
-                <div>
-                    {this.renderGroupingCriteria('date', 'date')}
-                    {this.renderGroupingCriteria('species', 'espèce')}
                 </div>
                 {this.renderSearchResult(inBounds, this.state.groupingCriteria)}
             </div>
