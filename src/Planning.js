@@ -19,7 +19,7 @@ class Planning extends Component {
             );
         }
         return planning.map((entry) => {
-            return <div className='entry'>
+            return <div key={entry.date} className='entry'>
                 <div>{entry.date}</div>
                 <div>{entry.location.label}</div>
             </div>;

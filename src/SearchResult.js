@@ -61,19 +61,30 @@ class SearchResult extends Component {
     }
 
     moveToLanildut() {
+        this.setState({
+            where: {
+                location: {
+                    lat: 48.473,
+                    lng: -4.745
+                },
+                label: 'Lanildut'
+            }
+        });
         this.map.setView([48.473, -4.745], 13);
     }
 
-    planFishingTrip() {
+    planFishingTrip(date) {
         const planning =[{
-            date: '23 Octobre' ,
+            date: date,
             location: {
                 label: 'Lanildult' ,
                 location: [48.473, -4.741]
             }
         }];
-        window.localStorage.setItem('planning', JSON.stringify(planning));
-        this.context.router.push('/planned');
+        return function () {
+            window.localStorage.setItem('planning', JSON.stringify(planning));
+            this.context.router.push('/planned');
+        }
     }
 
     groupBy(criteria) {
@@ -123,7 +134,7 @@ class SearchResult extends Component {
                 <TideChart />
                 <button
                     className='plan'
-                    onClick={this.planFishingTrip.bind(this)}
+                    onClick={this.planFishingTrip(result.date).bind(this)}
                 >
                     Planifier une sortie
                 </button>
