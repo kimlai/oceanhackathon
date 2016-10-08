@@ -232,7 +232,7 @@ function groupBySpecies(results) {
 }
 
 function groupByDate(results) {
-    return _.reduce(results, function (acc, result) {
+    const grouped = _.reduce(results, function (acc, result) {
         const species = result.species;
         const date = result.date;
         const location = result.location;
@@ -251,6 +251,8 @@ function groupByDate(results) {
         }
         return acc;
     }, []);
+
+    return _.sortBy(grouped, ['date']);
 }
 
 function groupByLocation(results) {
