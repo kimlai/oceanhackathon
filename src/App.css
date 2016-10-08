@@ -298,11 +298,12 @@ button:disabled {
  *************************/
 
 .single-planning-entry-container {
-    padding: 72px;
+    padding: 36px 72px;
+    margin-top: 370px;
 }
 
 .single-planning-entry-container header {
-    font-size: 48px;
+    font-size: 36px;
     text-align: center;
     margin-bottom: 48px;
 }
@@ -311,4 +312,12 @@ button:disabled {
     .single-planning-entry-container header {
         font-size: 24px;
     }
+}
+
+#planning-entry-map-container {
+    position: fixed;
+    top: 0;
+    height: 370px;
+    right: 0;
+    width: 100%;
 }

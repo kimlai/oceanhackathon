@@ -41,7 +41,7 @@ class SearchResult extends Component {
         mapContainer.id = 'map-container';
         mapContainer.style.height = window.innerHeight + 'px';
         document.body.appendChild(mapContainer);
-        const map = window.L.map('map-container').setView(position, 13);
+        const map = window.L.map('map-container', { scrollWheelZoom: false }).setView(position, 13);
         window.L.tileLayer(
             'https://api.mapbox.com/styles/v1/kimlai/city4g5cd00b22iqiwvyfdlv4/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoia2ltbGFpIiwiYSI6ImNpdHg4b3psMDAwMnAzd29hZ2VrbzVmeTcifQ.JEzjYNojtEPRBove3beibA',
             { maxZoom: 18 })
