@@ -96,7 +96,7 @@ class SearchResult extends Component {
             return (
                 <div className='search-result'>
                     <div className='empty-search-result'>
-                        Rien à pêcher par ici, essayez à <a onClick={this.moveToLanildut.bind(this)} href="#">Lanildut</a>
+                        Pas d'informations sur cette zone, déplacez-vous sur la carte, ou essayez à <a onClick={this.moveToLanildut.bind(this)} href="#">Lanildut</a>
                     </div>
                 </div>
             );
@@ -186,8 +186,9 @@ class SearchResult extends Component {
         });
         return (
             <div className='search-result-container'>
-                <div>
+                <div className='search-result-criteria'>
                     <div>{this.state.where.label}</div>
+                    <div>-</div>
                     <div>{this.state.when.label}</div>
                 </div>
                 {this.renderSearchResult(inBounds, this.state.groupingCriteria)}

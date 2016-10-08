@@ -153,9 +153,18 @@ button:disabled {
     }
 }
 
+.search-result-criteria {
+    display: flex;
+    justify-content: right;
+    font-size: 24px;
+}
+
+.search-result-criteria > div{
+    padding-right: 12px;
+}
+
 .empty-search-result {
-    padding-top: 72px;
-    text-align: center;
+    padding: 72px;
 }
 
 .search-results {
@@ -173,6 +182,7 @@ button:disabled {
     background: white;
     padding: 12px;
     margin-top: 24px;
+    border: 1px solid rgb(200, 200, 200);
     width: 100%;
 }
 
@@ -182,7 +192,7 @@ button:disabled {
 }
 
 .search-result-item-title {
-    padding-bottom: 6px;
+    padding-bottom: 12px;
     border-bottom: 1px solid rgb(230, 230, 230);
 }
 
