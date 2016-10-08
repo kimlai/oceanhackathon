@@ -1,0 +1,667 @@
+ [
+      {
+        "-moon": "nl",
+        "coef": "90",
+        "-state": "high",
+        "dateTime": "2016-10-01T05:45:00+02:00",
+        "height": "6.45"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-01T11:57:00+02:00",
+        "height": "1.35"
+      },
+      {
+        "coef": "90",
+        "-state": "high",
+        "dateTime": "2016-10-01T17:57:00+02:00",
+        "height": "6.60"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-02T00:17:00+02:00",
+        "height": "1.35"
+      },
+      {
+        "coef": "90",
+        "-state": "high",
+        "dateTime": "2016-10-02T06:16:00+02:00",
+        "height": "6.55"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-02T12:28:00+02:00",
+        "height": "1.35"
+      },
+      {
+        "coef": "89",
+        "-state": "high",
+        "dateTime": "2016-10-02T18:27:00+02:00",
+        "height": "6.60"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-03T00:47:00+02:00",
+        "height": "1.40"
+      },
+      {
+        "coef": "87",
+        "-state": "high",
+        "dateTime": "2016-10-03T06:47:00+02:00",
+        "height": "6.50"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-03T12:58:00+02:00",
+        "height": "1.45"
+      },
+      {
+        "coef": "85",
+        "-state": "high",
+        "dateTime": "2016-10-03T18:58:00+02:00",
+        "height": "6.50"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-04T01:17:00+02:00",
+        "height": "1.50"
+      },
+      {
+        "coef": "82",
+        "-state": "high",
+        "dateTime": "2016-10-04T07:17:00+02:00",
+        "height": "6.40"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-04T13:29:00+02:00",
+        "height": "1.60"
+      },
+      {
+        "coef": "78",
+        "-state": "high",
+        "dateTime": "2016-10-04T19:28:00+02:00",
+        "height": "6.30"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-05T01:47:00+02:00",
+        "height": "1.70"
+      },
+      {
+        "coef": "75",
+        "-state": "high",
+        "dateTime": "2016-10-05T07:47:00+02:00",
+        "height": "6.20"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-05T14:00:00+02:00",
+        "height": "1.80"
+      },
+      {
+        "coef": "70",
+        "-state": "high",
+        "dateTime": "2016-10-05T19:57:00+02:00",
+        "height": "6.05"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-06T02:18:00+02:00",
+        "height": "1.95"
+      },
+      {
+        "coef": "65",
+        "-state": "high",
+        "dateTime": "2016-10-06T08:16:00+02:00",
+        "height": "5.90"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-06T14:33:00+02:00",
+        "height": "2.05"
+      },
+      {
+        "coef": "60",
+        "-state": "high",
+        "dateTime": "2016-10-06T20:28:00+02:00",
+        "height": "5.70"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-07T02:51:00+02:00",
+        "height": "2.25"
+      },
+      {
+        "coef": "55",
+        "-state": "high",
+        "dateTime": "2016-10-07T08:48:00+02:00",
+        "height": "5.60"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-07T15:10:00+02:00",
+        "height": "2.35"
+      },
+      {
+        "coef": "49",
+        "-state": "high",
+        "dateTime": "2016-10-07T21:04:00+02:00",
+        "height": "5.40"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-08T03:29:00+02:00",
+        "height": "2.50"
+      },
+      {
+        "coef": "44",
+        "-state": "high",
+        "dateTime": "2016-10-08T09:29:00+02:00",
+        "height": "5.30"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-08T15:55:00+02:00",
+        "height": "2.60"
+      },
+      {
+        "coef": "39",
+        "-state": "high",
+        "dateTime": "2016-10-08T21:55:00+02:00",
+        "height": "5.05"
+      },
+      {
+        "-moon": "pq",
+        "-state": "low",
+        "dateTime": "2016-10-09T04:19:00+02:00",
+        "height": "2.75"
+      },
+      {
+        "coef": "35",
+        "-state": "high",
+        "dateTime": "2016-10-09T10:29:00+02:00",
+        "height": "5.00"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-09T16:59:00+02:00",
+        "height": "2.80"
+      },
+      {
+        "coef": "32",
+        "-state": "high",
+        "dateTime": "2016-10-09T23:09:00+02:00",
+        "height": "4.85"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-10T05:32:00+02:00",
+        "height": "2.90"
+      },
+      {
+        "coef": "32",
+        "-state": "high",
+        "dateTime": "2016-10-10T11:56:00+02:00",
+        "height": "4.90"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-10T18:27:00+02:00",
+        "height": "2.80"
+      },
+      {
+        "coef": "35",
+        "-state": "high",
+        "dateTime": "2016-10-11T00:41:00+02:00",
+        "height": "4.90"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-11T07:08:00+02:00",
+        "height": "2.80"
+      },
+      {
+        "coef": "40",
+        "-state": "high",
+        "dateTime": "2016-10-11T13:28:00+02:00",
+        "height": "5.10"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-11T19:52:00+02:00",
+        "height": "2.45"
+      },
+      {
+        "coef": "47",
+        "-state": "high",
+        "dateTime": "2016-10-12T02:01:00+02:00",
+        "height": "5.25"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-12T08:26:00+02:00",
+        "height": "2.35"
+      },
+      {
+        "coef": "55",
+        "-state": "high",
+        "dateTime": "2016-10-12T14:36:00+02:00",
+        "height": "5.55"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-12T20:54:00+02:00",
+        "height": "1.95"
+      },
+      {
+        "coef": "64",
+        "-state": "high",
+        "dateTime": "2016-10-13T03:00:00+02:00",
+        "height": "5.70"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-13T09:22:00+02:00",
+        "height": "1.85"
+      },
+      {
+        "coef": "72",
+        "-state": "high",
+        "dateTime": "2016-10-13T15:28:00+02:00",
+        "height": "6.10"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-13T21:44:00+02:00",
+        "height": "1.40"
+      },
+      {
+        "coef": "81",
+        "-state": "high",
+        "dateTime": "2016-10-14T03:50:00+02:00",
+        "height": "6.20"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-14T10:10:00+02:00",
+        "height": "1.35"
+      },
+      {
+        "coef": "88",
+        "-state": "high",
+        "dateTime": "2016-10-14T16:15:00+02:00",
+        "height": "6.60"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-14T22:29:00+02:00",
+        "height": "1.00"
+      },
+      {
+        "coef": "96",
+        "-state": "high",
+        "dateTime": "2016-10-15T04:36:00+02:00",
+        "height": "6.65"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-15T10:54:00+02:00",
+        "height": "0.95"
+      },
+      {
+        "coef": "102",
+        "-state": "high",
+        "dateTime": "2016-10-15T16:59:00+02:00",
+        "height": "7.00"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-15T23:12:00+02:00",
+        "height": "0.65"
+      },
+      {
+        "-moon": "pl",
+        "coef": "108",
+        "-state": "high",
+        "dateTime": "2016-10-16T05:21:00+02:00",
+        "height": "7.00"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-16T11:37:00+02:00",
+        "height": "0.70"
+      },
+      {
+        "coef": "111",
+        "-state": "high",
+        "dateTime": "2016-10-16T17:43:00+02:00",
+        "height": "7.25"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-16T23:56:00+02:00",
+        "height": "0.50"
+      },
+      {
+        "coef": "114",
+        "-state": "high",
+        "dateTime": "2016-10-17T06:06:00+02:00",
+        "height": "7.20"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-17T12:21:00+02:00",
+        "height": "0.55"
+      },
+      {
+        "coef": "114",
+        "-state": "high",
+        "dateTime": "2016-10-17T18:28:00+02:00",
+        "height": "7.35"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-18T00:40:00+02:00",
+        "height": "0.55"
+      },
+      {
+        "coef": "113",
+        "-state": "high",
+        "dateTime": "2016-10-18T06:51:00+02:00",
+        "height": "7.20"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-18T13:06:00+02:00",
+        "height": "0.65"
+      },
+      {
+        "coef": "111",
+        "-state": "high",
+        "dateTime": "2016-10-18T19:13:00+02:00",
+        "height": "7.25"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-19T01:26:00+02:00",
+        "height": "0.75"
+      },
+      {
+        "coef": "106",
+        "-state": "high",
+        "dateTime": "2016-10-19T07:36:00+02:00",
+        "height": "7.05"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-19T13:52:00+02:00",
+        "height": "0.90"
+      },
+      {
+        "coef": "101",
+        "-state": "high",
+        "dateTime": "2016-10-19T19:58:00+02:00",
+        "height": "6.90"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-20T02:13:00+02:00",
+        "height": "1.15"
+      },
+      {
+        "coef": "94",
+        "-state": "high",
+        "dateTime": "2016-10-20T08:22:00+02:00",
+        "height": "6.75"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-20T14:40:00+02:00",
+        "height": "1.30"
+      },
+      {
+        "coef": "86",
+        "-state": "high",
+        "dateTime": "2016-10-20T20:45:00+02:00",
+        "height": "6.45"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-21T03:02:00+02:00",
+        "height": "1.65"
+      },
+      {
+        "coef": "77",
+        "-state": "high",
+        "dateTime": "2016-10-21T09:09:00+02:00",
+        "height": "6.30"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-21T15:32:00+02:00",
+        "height": "1.80"
+      },
+      {
+        "coef": "69",
+        "-state": "high",
+        "dateTime": "2016-10-21T21:36:00+02:00",
+        "height": "5.95"
+      },
+      {
+        "-moon": "dq",
+        "-state": "low",
+        "dateTime": "2016-10-22T03:56:00+02:00",
+        "height": "2.15"
+      },
+      {
+        "coef": "61",
+        "-state": "high",
+        "dateTime": "2016-10-22T10:01:00+02:00",
+        "height": "5.85"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-22T16:31:00+02:00",
+        "height": "2.25"
+      },
+      {
+        "coef": "54",
+        "-state": "high",
+        "dateTime": "2016-10-22T22:35:00+02:00",
+        "height": "5.50"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-23T04:59:00+02:00",
+        "height": "2.55"
+      },
+      {
+        "coef": "48",
+        "-state": "high",
+        "dateTime": "2016-10-23T11:07:00+02:00",
+        "height": "5.50"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-23T17:42:00+02:00",
+        "height": "2.55"
+      },
+      {
+        "coef": "45",
+        "-state": "high",
+        "dateTime": "2016-10-23T23:55:00+02:00",
+        "height": "5.25"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-24T06:16:00+02:00",
+        "height": "2.75"
+      },
+      {
+        "coef": "45",
+        "-state": "high",
+        "dateTime": "2016-10-24T12:34:00+02:00",
+        "height": "5.35"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-24T19:07:00+02:00",
+        "height": "2.60"
+      },
+      {
+        "coef": "47",
+        "-state": "high",
+        "dateTime": "2016-10-25T01:26:00+02:00",
+        "height": "5.25"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-25T07:40:00+02:00",
+        "height": "2.65"
+      },
+      {
+        "coef": "51",
+        "-state": "high",
+        "dateTime": "2016-10-25T14:00:00+02:00",
+        "height": "5.50"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-25T20:26:00+02:00",
+        "height": "2.45"
+      },
+      {
+        "coef": "55",
+        "-state": "high",
+        "dateTime": "2016-10-26T02:37:00+02:00",
+        "height": "5.50"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-26T08:50:00+02:00",
+        "height": "2.40"
+      },
+      {
+        "coef": "60",
+        "-state": "high",
+        "dateTime": "2016-10-26T15:03:00+02:00",
+        "height": "5.75"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-26T21:25:00+02:00",
+        "height": "2.15"
+      },
+      {
+        "coef": "65",
+        "-state": "high",
+        "dateTime": "2016-10-27T03:30:00+02:00",
+        "height": "5.75"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-27T09:43:00+02:00",
+        "height": "2.10"
+      },
+      {
+        "coef": "70",
+        "-state": "high",
+        "dateTime": "2016-10-27T15:50:00+02:00",
+        "height": "6.00"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-27T22:11:00+02:00",
+        "height": "1.90"
+      },
+      {
+        "coef": "74",
+        "-state": "high",
+        "dateTime": "2016-10-28T04:11:00+02:00",
+        "height": "6.00"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-28T10:25:00+02:00",
+        "height": "1.90"
+      },
+      {
+        "coef": "77",
+        "-state": "high",
+        "dateTime": "2016-10-28T16:28:00+02:00",
+        "height": "6.15"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-28T22:48:00+02:00",
+        "height": "1.75"
+      },
+      {
+        "coef": "80",
+        "-state": "high",
+        "dateTime": "2016-10-29T04:46:00+02:00",
+        "height": "6.20"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-29T11:00:00+02:00",
+        "height": "1.70"
+      },
+      {
+        "coef": "82",
+        "-state": "high",
+        "dateTime": "2016-10-29T17:01:00+02:00",
+        "height": "6.30"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-29T23:20:00+02:00",
+        "height": "1.60"
+      },
+      {
+        "-moon": "nl",
+        "coef": "84",
+        "-state": "high",
+        "dateTime": "2016-10-30T04:18:00+01:00",
+        "height": "6.40"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-30T10:32:00+01:00",
+        "height": "1.60"
+      },
+      {
+        "coef": "84",
+        "-state": "high",
+        "dateTime": "2016-10-30T16:32:00+01:00",
+        "height": "6.45"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-30T22:50:00+01:00",
+        "height": "1.55"
+      },
+      {
+        "coef": "85",
+        "-state": "high",
+        "dateTime": "2016-10-31T04:49:00+01:00",
+        "height": "6.50"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-31T11:03:00+01:00",
+        "height": "1.55"
+      },
+      {
+        "coef": "85",
+        "-state": "high",
+        "dateTime": "2016-10-31T17:03:00+01:00",
+        "height": "6.45"
+      },
+      {
+        "-state": "low",
+        "dateTime": "2016-10-31T23:20:00+01:00",
+        "height": "1.55"
+      }
+    ]

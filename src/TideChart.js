@@ -3,14 +3,15 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid } from 'recharts';
 
 class TideChart extends Component {
     render() {
-        const data = [
-            { time: '2h', height: 4.2 },
-            { time: '3h', height: 1.2 },
-            { time: '8h', height: 6.6 },
-            { time: '14h', height: 2.1 },
-            { time: '20h', height: 6.4 },
-            { time: '24h', height: 4.3 },
-        ];
+        console.log(this.props.data);
+        const data = this.props.data.map((tideData) => {
+            const date = new Date(tideData.dateTime);
+            return {
+                time: date.getHours() + 'h' + date.getMinutes(),
+                height: parseFloat(tideData.height),
+            };
+        });
+        console.log(data);
         return (
             <div className='tide-chart'>
                 <LineChart

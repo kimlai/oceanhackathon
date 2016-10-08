@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 var _ = require('lodash');
+import tides from './tides-camaret.json'
 import TideChart from './TideChart';
 
 class SearchResult extends Component {
@@ -135,12 +136,16 @@ class SearchResult extends Component {
 
     renderByDate(dates) {
         return dates.map((result) => {
+            const coeffs = result.tides.map((tide) => {
+                return tide.coef;
+            });
+            const onlyCoeffs = _.filter(coeffs, (coef) => { return typeof coef !== 'undefined' });
             return <div key={result.date} className='search-result-item'>
                 <div className='search-result-item-title'>{result.date}</div>
                 <div className='search-result-item-body'>
                     <div>
-                        <div className='search-result-item-information-header'>Marée</div>
-                        <TideChart />
+                        <div className='search-result-item-information-header'>Marée ({onlyCoeffs.join(', ')})</div>
+                        <TideChart data={result.tides} />
                     </div>
                     <div>
                         <div className='search-result-item-information-header'>Espèces présentes</div>
@@ -200,32 +205,32 @@ class SearchResult extends Component {
         const searchResults =
             [ { species: 'Palourdes'
               , forbidden: 'Ormeaux'
-              , date: '23 Octobre'
+              , date: '23 Octobre 2016'
               , location: [48.473, -4.741]
               }
             , { species: 'Palourdes'
               , forbidden: 'Ormeaux'
-              , date: '15 Octobre'
+              , date: '17 Octobre 2016'
               , location: [48.477, -4.749]
               }
             , { species: 'Crevettes grises'
               , forbidden: 'Ormeaux'
-              , date: '23 Octobre'
+              , date: '23 Octobre 2016'
               , location: [48.472, -4.742]
               }
             , { species: 'Tellines'
               , forbidden: 'Ormeaux'
-              , date: '15 Octobre'
+              , date: '15 Octobre 2016'
               , location: [48.471, -4.745]
               }
             , { species: 'Moules'
               , forbidden: 'Ormeaux'
-              , date: '15 Octobre'
+              , date: '15 Octobre 2016'
               , location: [48.471, -4.745]
               }
             , { species: 'Moules'
               , forbidden: 'Ormeaux'
-              , date: '18 Octobre'
+              , date: '18 Octobre 2016'
               , location: [48.471, -4.745]
               }
             ];
@@ -279,6 +284,20 @@ function groupByDate(results) {
         }
         return acc;
     }, []);
+
+    const isOnTheSameDay = function (date1, date2) {
+        return date1.getDate() === date2.getDate() 
+            && date1.getMonth() === date2.getMonth()
+            && date1.getFullYear() === date2.getFullYear()
+    };
+
+    grouped.map((result) => {
+        const tidesOfDay  =_.filter(tides, (tide) => {
+            return isOnTheSameDay(new Date(tide.dateTime), new Date(result.date));
+        });
+        result.tides = tidesOfDay;
+        return result;
+    });
 
     return _.sortBy(grouped, ['date']);
 }
