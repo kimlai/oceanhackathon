@@ -19,10 +19,13 @@ class Planning extends Component {
             );
         }
         return planning.map((entry) => {
+            const link = '/planning/' + entry.date + '/' + entry.location.label;
             return <div key={entry.date} className='planning-entry'>
                 <div className='date'>{entry.date}</div>
                 <div>{entry.location.label}</div>
-                <button>Voir</button>
+                <button>
+                    <Link className='see-planning-entry' to={link}>Voir</Link>
+                </button>
             </div>;
         });
     }

@@ -283,3 +283,26 @@ button:disabled {
     padding: 12px 36px;
     font-size: 24px;
 }
+
+.see-planning-entry {
+    background-color: rgb(238, 89, 73);
+    color: white;
+    padding: 8px 36px;
+    font-size: 18px;
+    border: none;
+    text-decoration: none;
+}
+
+/*************************
+ * SINGLE PLANNING ENTRY
+ *************************/
+
+.single-planning-entry-container {
+    padding: 72px;
+}
+
+.single-planning-entry-container header {
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 48px;
+}

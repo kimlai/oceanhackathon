@@ -5,6 +5,7 @@ import './App.css';
 import Search from './Search';
 import SearchResult from './SearchResult';
 import Planning from './Planning';
+import PlanningEntry from './PlanningEntry';
 
 class App extends Component {
     constructor(props) {
@@ -30,6 +31,10 @@ class App extends Component {
                 <Route
                     path='/planned'
                     component={Planning}
+                />
+                <Route
+                    path='/planning/:date/:location'
+                    component={PlanningEntry}
                 />
             </Router>
         );
