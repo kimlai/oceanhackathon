@@ -65,6 +65,14 @@ class SearchResult extends Component {
     }
 
     planFishingTrip() {
+        const planning =[{
+            date: '23 Octobre' ,
+            location: {
+                label: 'Lanildult' ,
+                location: [48.473, -4.741]
+            }
+        }];
+        window.localStorage.setItem('planning', JSON.stringify(planning));
         this.context.router.push('/planned');
     }
 
