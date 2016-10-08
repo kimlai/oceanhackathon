@@ -122,7 +122,7 @@ class SearchResult extends Component {
 
     renderBySpecies(species) {
         return species.map(function (result) {
-            return <div key={result.species} className='search-result-item'>
+            return <div key={result.species} className='search-result-item by-species'>
                 <div className='search-result-item-title'>{result.species}</div>
                 <div className='species-dates'>
                     {result.dates.map(function (date) {
@@ -137,16 +137,30 @@ class SearchResult extends Component {
         return dates.map((result) => {
             return <div key={result.date} className='search-result-item'>
                 <div className='search-result-item-title'>{result.date}</div>
-                <div className='date-species'>
-                    {result.species.join(', ')}
+                <div className='search-result-item-body'>
+                    <div>
+                        <div className='search-result-item-information-header'>Marée</div>
+                        <TideChart />
+                    </div>
+                    <div>
+                        <div className='search-result-item-information-header'>Espèces présentes</div>
+                        <div className='date-species'>
+                            {result.species.join(', ')}
+                        </div>
+                        <div className='search-result-item-information-header'>Espèces interdites à la pêche</div>
+                        <div className='date-species'>
+                            {_.union(result.forbidden).join(', ')}
+                        </div>
+                    </div>
                 </div>
-                <TideChart />
-                <button
-                    className='plan'
-                    onClick={this.planFishingTrip(result.date).bind(this)}
-                >
+                <div className='plan-wrapper'>
+                    <button
+                        className='plan'
+                        onClick={this.planFishingTrip(result.date).bind(this)}
+                    >
                     Planifier une sortie
-                </button>
+                    </button>
+                </div>
             </div>;
         });
     }
@@ -183,24 +197,34 @@ class SearchResult extends Component {
 
     fakeSearchResults() {
         const searchResults =
-            [ { species: 'palourde'
+            [ { species: 'Palourdes'
+              , forbidden: 'Ormeaux'
               , date: '23 Octobre'
               , location: [48.473, -4.741]
               }
-            , { species: 'palourde'
+            , { species: 'Palourdes'
+              , forbidden: 'Ormeaux'
               , date: '15 Octobre'
               , location: [48.477, -4.749]
               }
-            , { species: 'crevette grise'
+            , { species: 'Crevettes grises'
+              , forbidden: 'Ormeaux'
               , date: '23 Octobre'
               , location: [48.472, -4.742]
               }
-            , { species: 'telline'
+            , { species: 'Tellines'
+              , forbidden: 'Ormeaux'
               , date: '15 Octobre'
               , location: [48.471, -4.745]
               }
-            , { species: 'moule'
+            , { species: 'Moules'
+              , forbidden: 'Ormeaux'
               , date: '15 Octobre'
+              , location: [48.471, -4.745]
+              }
+            , { species: 'Moules'
+              , forbidden: 'Ormeaux'
+              , date: '18 Octobre'
               , location: [48.471, -4.745]
               }
             ];
@@ -234,6 +258,7 @@ function groupBySpecies(results) {
 function groupByDate(results) {
     const grouped = _.reduce(results, function (acc, result) {
         const species = result.species;
+        const forbidden = result.forbidden;
         const date = result.date;
         const location = result.location;
         const existingResult = _.find(acc, function (result) {
@@ -241,11 +266,13 @@ function groupByDate(results) {
         });
         if (existingResult) {
             existingResult.species.push(species);
+            existingResult.forbidden.push(forbidden);
             existingResult.locations.push(location);
         } else {
             acc.push({
                 date: date,
                 species: [species],
+                forbidden: [forbidden],
                 locations: [location],
             });
         }

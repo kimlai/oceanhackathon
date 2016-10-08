@@ -149,6 +149,7 @@ button:disabled {
 @media screen and (max-width: 400px) {
     .search-result-container {
         width: 100%;
+        padding: 24px;
     }
 }
 
@@ -171,25 +172,44 @@ button:disabled {
 .search-result-item {
     background: white;
     padding: 12px;
-    min-width: 45%;
     margin-top: 24px;
+    width: 100%;
+}
+
+.search-result-item.by-species {
+    width: 45%;
     margin-right: 24px;
 }
 
 .search-result-item-title {
-    margin-bottom: 12px;
     padding-bottom: 6px;
     border-bottom: 1px solid rgb(230, 230, 230);
 }
 
+.search-result-item-title {
+    text-transform: uppercase;
+}
+
+.search-result-item-body {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px;
+}
+
 @media screen and (max-width: 400px) {
-    .search-result-item {
+    .search-result-item-body {
+        flex-direction: column;
+    }
+    .search-result-item.by-species {
         width: 100%;
+        margin-right: 0;
     }
 }
 
-.search-result-item-title {
-    text-transform: uppercase;
+.search-result-item-information-header {
+    font-weight: bold;
+    margin-top: 18px;
+    margin-bottom: 6px;
 }
 
 .grouping-criteria {
@@ -209,7 +229,11 @@ button:disabled {
 }
 
 .tide-chart .recharts-wrapper{
-    margin-top: 24px;
+    margin-left: -42px;
+}
+
+.plan-wrapper {
+    padding: 18px 9px 9px 9px;
 }
 
 .plan {

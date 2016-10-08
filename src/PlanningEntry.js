@@ -12,7 +12,7 @@ class Planning extends Component {
 
     componentWillUnmount() {
         this.map.remove();
-        const mapElement = document.getElementById('map-container');
+        const mapElement = document.getElementById('planning-entry-map-container');
         mapElement.remove();
     }
 
