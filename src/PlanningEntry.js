@@ -15,6 +15,10 @@ class Planning extends Component {
         return (
             <div className='single-planning-entry-container'>
                 <header>Ma sortie à {entry.location.label} le {entry.date}</header>
+                <h1>Marée</h1>
+                <h1>Météo</h1>
+                <h1>Règlementation</h1>
+                <h1>Bonne pratiques</h1>
             </div>
         );
     }
