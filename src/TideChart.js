@@ -13,10 +13,10 @@ class TideChart extends Component {
         return (
             <div className='tide-chart'>
                 <LineChart
-                    width={200}
+                    width={this.props.width || 200}
                     height={200}
                     data={data}
-                    margin={{ top: 12, right: 12, bottom: 12, left: 0 }}
+                    margin={this.props.margin || { top: 12, right: 12, bottom: 12, left: 0 }}
                 >
                     <Line type="monotone" dataKey="height" stroke="#8884d8" />
                     <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />

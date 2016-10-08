@@ -355,7 +355,6 @@ button:disabled {
 
 .single-planning-entry-container {
     padding: 36px 72px;
-    margin-top: 370px;
 }
 
 .single-planning-entry-container header {
@@ -368,6 +367,46 @@ button:disabled {
     .single-planning-entry-container header {
         font-size: 24px;
     }
+}
+
+.single-planning-entry-fst-row {
+    display: flex;
+}
+
+.single-planning-entry-species {
+}
+
+.single-planning-entry-fst-row > div {
+    padding-right: 24px;
+}
+
+.single-planning-entry-wheather img {
+    padding: 18px;
+}
+
+.species {
+    background: white;
+    padding: 24px;
+}
+
+.species img {
+    float: left;
+}
+
+.species-name {
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+.species-container {
+    display: flex;
+    flex-direction: column;
+}
+
+table.species-info th,
+table.species-info td {
+    text-align: left;
+    padding: 6px;
 }
 
 #planning-entry-map-container {
