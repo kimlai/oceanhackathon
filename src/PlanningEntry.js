@@ -14,7 +14,7 @@ class Planning extends Component {
         const entry = this.state.entry;
         return (
             <div className='single-planning-entry-container'>
-                <header>Ma sortie à {entry.location.label} le {entry.date}</header>
+                <header>Votre sortie à {entry.location.label} le {entry.date}</header>
                 <h1>Marée</h1>
                 <h1>Météo</h1>
                 <h1>Règlementation</h1>

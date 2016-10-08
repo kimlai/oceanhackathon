@@ -33,7 +33,7 @@ class Planning extends Component {
     render() {
         return (
             <div className='planning-container'>
-                <header>Mes sorties prévues</header>
+                <header>Vos sorties prévues</header>
                 {this.renderPlanning(this.state.planning)}
             </div>
         );
