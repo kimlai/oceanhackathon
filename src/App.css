@@ -222,14 +222,36 @@ button:disabled {
     margin-bottom: 6px;
 }
 
+.filters {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+}
+
 .grouping-criteria {
     padding: 6px;
-    margin: 18px 6px 6px 0px;
+    margin: 6px 6px 6px 0px;
     cursor: pointer;
     border: 1px solid rgb(12, 32, 68);
-    display: inline-block;
     color: rgb(50, 50, 50);
     font-size: 14px;
+}
+
+.coeff-range {
+    padding-left: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.coeff-range label {
+    font-size: 14px;
+}
+
+.slider-container {
+    width: 100px;
+    display: inline-block;
+    margin-left: 12px;
+    margin-top: -2px;
 }
 
 .grouping-criteria--active {

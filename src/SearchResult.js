@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import Slider from 'rc-slider';
 import classNames from 'classnames';
 var _ = require('lodash');
+import 'rc-slider/assets/index.css';
 import tides from './tides-camaret.json'
 import TideChart from './TideChart';
 
@@ -26,6 +28,7 @@ class SearchResult extends Component {
                 label: props.params.whenLabel,
             },
             searchResults: this.fakeSearchResults(),
+            coeff: 40,
         };
     }
 
@@ -104,15 +107,27 @@ class SearchResult extends Component {
         }
         let result;
         if (groupingCriteria === 'date') {
-            result = this.renderByDate(groupByDate(searchResult));
+            result = this.renderByDate(groupByDate(searchResult, this.state.coeff));
         } else {
             result = this.renderBySpecies(groupBySpecies(searchResult));
         }
         return (
             <div className='search-result'>
-                <div>
+                <div className='filters'>
                     {this.renderGroupingCriteria('date', 'date')}
                     {this.renderGroupingCriteria('species', 'espèce')}
+                    <div className='coeff-range'>
+                        <label>Coeff. > {this.state.coeff}</label>
+                        <div className='slider-container'>
+                            <Slider
+                                value={this.state.coeff}
+                                onChange={(value) => { this.setState({ coeff : value })}}
+                                step={10}
+                                min={40}
+                                max={120}
+                            />
+                        </div>
+                    </div>
                 </div>
                 <div className='search-results'>
                     {result}
@@ -213,6 +228,21 @@ class SearchResult extends Component {
               , date: '17 Octobre 2016'
               , location: [48.286, -4.606]
               }
+            , { species: 'Bigorneaux'
+              , forbidden: 'Ormeaux'
+              , date: '12 Octobre 2016'
+              , location: [48.286, -4.606]
+              }
+            , { species: 'Crevettes bouquet'
+              , forbidden: 'Ormeaux'
+              , date: '12 Octobre 2016'
+              , location: [48.286, -4.606]
+              }
+            , { species: 'Bigorneaux'
+              , forbidden: 'Ormeaux'
+              , date: '16 Octobre 2016'
+              , location: [48.286, -4.606]
+              }
             , { species: 'Crevettes bouquet'
               , forbidden: 'Ormeaux'
               , date: '23 Octobre 2016'
@@ -271,7 +301,7 @@ function groupBySpecies(results) {
     }, []);
 }
 
-function groupByDate(results) {
+function groupByDate(results, maxCoeff) {
     const grouped = _.reduce(results, function (acc, result) {
         const species = result.species;
         const forbidden = result.forbidden;
@@ -309,7 +339,14 @@ function groupByDate(results) {
         return result;
     });
 
-    return _.sortBy(grouped, ['date']);
+    const onlyMatchingCoeff = _.filter(grouped, (result) => {
+        console.log(result.tides);
+        return _.some(result.tides, (tide) => {
+            return tide.coef >= maxCoeff;
+        });
+    });
+
+    return _.sortBy(onlyMatchingCoeff, ['date']);
 }
 
 function groupByLocation(results) {

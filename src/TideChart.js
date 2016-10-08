@@ -3,7 +3,6 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid } from 'recharts';
 
 class TideChart extends Component {
     render() {
-        console.log(this.props.data);
         const data = this.props.data.map((tideData) => {
             const date = new Date(tideData.dateTime);
             return {
@@ -11,7 +10,6 @@ class TideChart extends Component {
                 height: parseFloat(tideData.height),
             };
         });
-        console.log(data);
         return (
             <div className='tide-chart'>
                 <LineChart

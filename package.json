@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "lodash": "^4.16.3",
+    "rc-slider": "^5.1.1",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-geosuggest": "^1.25.1",
