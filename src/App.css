@@ -353,10 +353,6 @@ button:disabled {
  * SINGLE PLANNING ENTRY
  *************************/
 
-.single-planning-entry-container {
-    padding: 36px 72px;
-}
-
 .single-planning-entry-container header {
     font-size: 36px;
     text-align: center;
@@ -409,8 +405,26 @@ table.species-info td {
     padding: 6px;
 }
 
+.single-planning-entry-container {
+    padding: 36px 0px 36px 72px;
+    margin-top: 570px;
+    margin-left: 72px;
+    margin-right: 72px;
+    margin-bottom: 72px;
+}
+
+@media screen and (max-width: 400px) {
+    .single-planning-entry-container {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .single-planning-entry-fst-row {
+        flex-direction: column;
+    }
+}
+
 #planning-entry-map-container {
-    position: fixed;
+    position: absolute;
     top: 0;
     height: 570px;
     right: 0;
