@@ -43,13 +43,36 @@ class Planning extends Component {
                 // opacity: 0.2,
         });
 
+        var especes = window.L.tileLayer.wms('http://geosu-iuem.univ-brest.fr/geoserver/LETG-BREST/wms', {
+                layers: 'comer_especes',
+                format: 'image/png',
+                transparent: true,
+                // opacity: 0.2,
+        });
+
+        //légende associée
+
+        var legend = window.L.control({position: 'bottomright'});
+
+        legend.onAdd = function (map) {
+
+            var div = window.L.DomUtil.create('div', 'info legend');
+            div.innerHTML = "<img src = 'http://geosu-iuem.univ-brest.fr/geoserver/LETG-BREST/wms?service=wms&request=GetLegendGraphic&VERSION=1.1.1&FORMAT=image/png&WIDTH=15&HEIGHT=15&layer=comer_especes'>";
+            return div;
+        };
+
+        legend.addTo(map);
+
+        
+
         var baseMaps = {
             "Mapbox" : mapbox,
             "Orthophotographie (sattelite)" : satBretagne
         };
 
         var overlayMaps = {
-            "Aires marines protégées" : wmsLayer
+            "Aires marines protégées" : wmsLayer,
+            "Espèces" : especes
         };
 
         this.map = map;
