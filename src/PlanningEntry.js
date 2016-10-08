@@ -33,10 +33,19 @@ class Planning extends Component {
                 layers: 'Aires marines protégées',
                 format: 'image/png',
                 transparent: true,
-            }).addTo(map);
+                opacity: 0.2,
+        }).addTo(map);
+
+        var satBretagne = window.L.tileLayer.wms('http://geobretagne.fr/geoserver/photo/wms', {
+                layers: 'ortho-composite',
+                // format: 'image/png',
+                // transparent: true,
+                // opacity: 0.2,
+        });
 
         var baseMaps = {
-            "Mapbox" : mapbox
+            "Mapbox" : mapbox,
+            "Orthophotographie (sattelite)" : satBretagne
         };
 
         var overlayMaps = {
