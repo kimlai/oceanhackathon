@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PlanningEntryInfo from './PlanningEntryInfo';
 
 import data from './test.json'
 
@@ -56,10 +57,7 @@ class Planning extends Component {
         return (
             <div className='single-planning-entry-container'>
                 <header>Votre sortie à {entry.location.label} le {entry.date}</header>
-                <h1>Marée</h1>
-                <h1>Météo</h1>
-                <h1>Règlementation</h1>
-                <h1>Bonne pratiques</h1>
+                <PlanningEntryInfo entry={entry} />
             </div>
         );
     }
