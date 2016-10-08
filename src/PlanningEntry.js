@@ -48,7 +48,7 @@ class Planning extends Component {
                 format: 'image/png',
                 transparent: true,
                 // opacity: 0.2,
-        });
+        }).addTo(map);
 
         //légende associée
 
@@ -66,8 +66,8 @@ class Planning extends Component {
         
 
         var baseMaps = {
-            "Mapbox" : mapbox,
-            "Orthophotographie (sattelite)" : satBretagne
+            "Plan" : mapbox,
+            "Satellite" : satBretagne
         };
 
         var overlayMaps = {
@@ -77,7 +77,7 @@ class Planning extends Component {
 
         this.map = map;
         wmsLayer.remove();
-        window.L.control.layers(baseMaps, overlayMaps).addTo(map);
+        window.L.control.layers(baseMaps, overlayMaps, { collapsed: false }).addTo(map);
     }
 
     render() {
