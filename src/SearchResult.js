@@ -61,25 +61,25 @@ class SearchResult extends Component {
         this.map = map;
     }
 
-    moveToLanildut() {
+    moveToCamaret() {
         this.setState({
             where: {
                 location: {
-                    lat: 48.473,
-                    lng: -4.745
+                    lat: 48.1636,
+                    lng: -4.435
                 },
-                label: 'Lanildut'
+                label: 'Camaret-sur-mer'
             }
         });
-        this.map.setView([48.473, -4.745], 13);
+        this.map.setView([48.286, -4.606], 13);
     }
 
     planFishingTrip(date) {
         const planning =[{
             date: date,
             location: {
-                label: 'Lanildult' ,
-                location: [48.473, -4.741]
+                label: 'Camaret-sur-mer' ,
+                location: [48.286, -4.606]
             }
         }];
         return function () {
@@ -97,7 +97,7 @@ class SearchResult extends Component {
             return (
                 <div className='search-result'>
                     <div className='empty-search-result'>
-                        Pas d'informations sur cette zone, déplacez-vous sur la carte, ou essayez à <a onClick={this.moveToLanildut.bind(this)} href="#">Lanildut</a>
+                        Pas d'informations sur cette zone, déplacez-vous sur la carte, ou essayez à <a onClick={this.moveToCamaret.bind(this)} href="#">Camaret-sur-mer</a>
                     </div>
                 </div>
             );
@@ -152,7 +152,7 @@ class SearchResult extends Component {
                         <div className='date-species'>
                             {result.species.join(', ')}
                         </div>
-                        <div className='search-result-item-information-header'>Espèces interdites à la pêche</div>
+                        <div className='search-result-item-information-header'>❌ Espèces interdites à la pêche</div>
                         <div className='date-species'>
                             {_.union(result.forbidden).join(', ')}
                         </div>
@@ -203,35 +203,45 @@ class SearchResult extends Component {
 
     fakeSearchResults() {
         const searchResults =
-            [ { species: 'Palourdes'
+            [ { species: 'Bigorneaux'
               , forbidden: 'Ormeaux'
               , date: '23 Octobre 2016'
-              , location: [48.473, -4.741]
+              , location: [48.286, -4.606]
               }
-            , { species: 'Palourdes'
+            , { species: 'Bigorneaux'
               , forbidden: 'Ormeaux'
               , date: '17 Octobre 2016'
-              , location: [48.477, -4.749]
+              , location: [48.286, -4.606]
               }
-            , { species: 'Crevettes grises'
+            , { species: 'Crevettes bouquet'
               , forbidden: 'Ormeaux'
               , date: '23 Octobre 2016'
-              , location: [48.472, -4.742]
+              , location: [48.327342, -4.542846]
               }
-            , { species: 'Tellines'
+            , { species: 'Etrilles'
               , forbidden: 'Ormeaux'
               , date: '15 Octobre 2016'
-              , location: [48.471, -4.745]
+              , location: [48.327342, -4.542846]
               }
             , { species: 'Moules'
               , forbidden: 'Ormeaux'
               , date: '15 Octobre 2016'
-              , location: [48.471, -4.745]
+              , location: [48.285489, -4.479987]
               }
             , { species: 'Moules'
               , forbidden: 'Ormeaux'
               , date: '18 Octobre 2016'
-              , location: [48.471, -4.745]
+              , location: [48.286, -4.606]
+              }
+            , { species: 'Tourteaux'
+              , forbidden: 'Ormeaux'
+              , date: '18 Octobre 2016'
+              , location: [48.285489, -4.479987]
+              }
+            , { species: 'Ormeaux'
+              , forbidden: 'Ormeaux'
+              , date: '18 Octobre 2016'
+              , location: [48.286, -4.606]
               }
             ];
 
