@@ -1,3 +1,7 @@
+html {
+    height: 100%;
+}
+
 * {
     font-family: "proxima-nova";
     color: rgb(12, 32, 68);
@@ -12,6 +16,7 @@ ul {
 
 body {
     background-color: rgb(189, 236, 239);
+    height: 100%;
 }
 
 #app {
@@ -21,10 +26,16 @@ body {
  *  SEARCH
  ***************/
 
+body.poulpe {
+    background: url(./images/poulpe.gif) no-repeat center center fixed;
+    background-size: cover;
+}
+
 .search-form {
     display: flex;
     justify-content: center;
     padding-top: 10%;
+    height: 100%;
 }
 
 @media screen and (max-width: 400px) {

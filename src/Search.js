@@ -16,6 +16,16 @@ class Search extends Component {
         router: React.PropTypes.object
     }
 
+    componentWillMount() {
+        const body = document.getElementsByTagName('body')[0];
+        body.className = 'poulpe';
+    }
+
+    componentWillUnmount() {
+        const body = document.getElementsByTagName('body')[0];
+        body.className = '';
+    }
+
     onLocationSelected(suggestion) {
         this.setState({
             where: {
