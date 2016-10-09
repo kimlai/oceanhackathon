@@ -121,8 +121,8 @@ class Planning extends Component {
                         </ul>
                         <h2>Si vous souhaitez aider la science</h2>
                         <ul>
-                            <li>• Programme [http://www.asso-apecs.org/Principes-du-programme.html Capoera]</li>
-                            <li>• Programme [http://www.biolit.fr/ Biolit]</li>
+                            <li>• <a target='_blank' href='http://www.asso-apecs.org/Principes-du-programme.html'>Le programme Capoera</a></li>
+                            <li>• <a target='_blank' href='http://www.biolit.fr'>Le programme Biolit</a></li>
                         </ul>
                     </div>
                 </div>
