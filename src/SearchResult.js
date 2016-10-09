@@ -87,7 +87,8 @@ class SearchResult extends Component {
         this.map = map;
     }
 
-    moveToCamaret() {
+    moveToCamaret(e) {
+        e.preventDefault();
         this.setState({
             where: {
                 location: {
