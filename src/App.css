@@ -497,3 +497,38 @@ nav a {
 .logo {
     padding: 9px 0px 2px 18px;
 }
+
+@media screen and (max-width: 400px) {
+    nav {
+        display: flex;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        background: white;
+        z-index: 99;
+        justify-content: left;
+        border-top: 1px solid rgb(200, 200, 200);
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .account {
+        display: none;
+    }
+
+    .nav-one > * {
+        font-size: 16px;
+        padding: 12px;
+        vertical-align: middle;
+        margin: 0;
+    }
+
+    .nav-two > * {
+        font-size: 16px;
+        padding: 12px;
+        vertical-align: middle;
+        margin: 0;
+    }
+}
