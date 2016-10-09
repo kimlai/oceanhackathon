@@ -138,7 +138,7 @@ function getSpecies() {
         , when: 'Toute l\'année'
         , size: '14cm'
         , quantity: '10 /jour/pêcheur'
-        , how: 'Crochet, à la main'
+        , how: ['Crochet', 'à la main']
         , image: tourteaux
         },
         { name: 'Crevette bouquet'
@@ -146,7 +146,7 @@ function getSpecies() {
         , when: 'Toute l’année'
         , size: '5cm'
         , quantity: '5L /jour/pêcheur'
-        , how: 'Petite épuisette, haveneau'
+        , how: ['Petite épuisette', 'haveneau']
         , image: crevette
         },
         { name: 'Etrille'
@@ -154,7 +154,7 @@ function getSpecies() {
         , when: 'Toute l’année'
         , size: '6,5cm'
         , quantity: '40 /jour/pêcheur'
-        , how: 'Crochet, à la main'
+        , how: ['Crochet', 'à la main']
         , image: etrille
         },
         { name: 'Bigorneau'
@@ -162,7 +162,7 @@ function getSpecies() {
         , when: 'Toute l’année'
         , size: 'Prendre les plus gros individus'
         , quantity: '500 /jour (env. 3 kg) et /pêcheur'
-        , how: 'À la main'
+        , how: ['à la main']
         , image: bigorneau
         },
         { name: 'Ormeaux'
@@ -170,7 +170,7 @@ function getSpecies() {
         , when: 'Interdit du 15/06 au 31/08'
         , size: '9cm'
         , quantity: '20 /jour/pêcheur'
-        , how: 'Crochet, à la main'
+        , how: ['Crochet', 'à la main']
         , image: ormeaux
         },
         { name: 'Moules'
@@ -178,7 +178,7 @@ function getSpecies() {
         , when: 'Interdit du 01/05 au 31/08'
         , size: '4cm'
         , quantity: '300 /jour (env. 3 kg) /pêcheur'
-        , how: 'Griffe à dents, couteau'
+        , how: ['Griffe à dents', 'couteau']
         , image: moule
         }
     ];
