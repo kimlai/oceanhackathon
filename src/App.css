@@ -632,7 +632,12 @@ nav a {
 
 .blocs {
     display: flex;
-    padding: 12px;
+    margin: 12px;
+}
+
+.blocs img {
+    width: 48px;
+    height: 48px;
 }
 
 .blocs .text {
@@ -643,4 +648,9 @@ nav a {
 .herbier {
     padding: 12px;
     font-size: 16px;
+}
+
+.bloc-img-container {
+    width: 48px;
+    height: 48px;
 }
