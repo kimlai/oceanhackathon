@@ -381,6 +381,8 @@ button:disabled {
     .single-planning-entry-container header {
         font-size: 24px;
     }
+    .single-planning-entry-container {
+    }
 }
 
 .single-planning-entry-fst-row {
@@ -449,6 +451,7 @@ table.species-info td {
     .single-planning-entry-container {
         margin-left: 0px;
         margin-right: 0px;
+        width: 100%;
     }
     .single-planning-entry-fst-row {
         flex-direction: column;
