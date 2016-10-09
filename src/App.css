@@ -409,6 +409,7 @@ button:disabled {
 
 .single-planning-entry-fst-row {
     display: flex;
+    justify-content: space-around;
 }
 
 .single-planning-entry-species {
@@ -598,4 +599,23 @@ nav a {
     .activities {
         flex-direction: column;
     }
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    background: white;
+}
+
+.commenter {
+    font-weight: bold;
+}
+
+.comment {
+    display: flex;
+    margin: 12px;
+}
+
+.comment-content {
+    padding-left: 12px;
 }

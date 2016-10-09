@@ -55,13 +55,67 @@ class Planning extends Component {
                             })}
                         </div>
                     </div>
-                    <h1>Bonne pratiques</h1>
-                        <div className='species-container'>
-                        <div> Site référent pour la peche a pied: <a href='http://www.pecheapied-responsable.fr/'> pêche à pied responsable</a> </div>
-
-
-
+                    <h1>Quelques conseils</h1>
+                    <div> Site référent pour la peche a pied: <a target='_blank' href='http://www.pecheapied-responsable.fr/'> pêche à pied responsable</a> </div>
+                    <ul>
+                        <li>I – les rochers tels que tu les as trouvés tu remettras</li>
+                        <li>II – les zones des pêches autorisées tu respecteras</li>
+                        <li>III – les tailles de capture légales tu appliqueras</li>
+                        <li>VI – les femelles portant des œufs tu relâcheras</li>
+                        <li>V – seule la quantité que tu consommeras tu pêcheras</li>
+                        <li>VI – Les outils préconisés tu utiliseras</li>
+                        <li>VII – les trous tu reboucheras</li>
+                        <li>VIII – au fur et à mesure le produit de ta pêche tu trieras</li>
+                        <li>IX – les individus les plus petits à l’endroit où tu les as trouvés tu relâcheras</li>
+                        <li>X – aucun coquillage trouvé sur le sable tu ne pêcheras</li>
+                        <li>XI – avant de les consommer les coquillages dégorger tu feras</li>
+                    </ul>
+                    <h1>Communauté</h1>
+                    <div className='comment'>
+                        <div className='avatar'>
+                            <img src='https://a2.muscache.com/defaults/user_pic-50x50.png?v=2' />
                         </div>
+                        <div className='comment-content'>
+                            <div className='commenter'>Martine</div>
+                            <div>
+                                Coucou ! le site de Camaret est vraiment super, beaucoup
+                                de palourdes et de couteaux et superbes paysages ! A
+                                bientôt !
+                            </div>
+                        </div>
+                    </div>
+                    <div className='comment'>
+                        <div className='avatar'>
+                            <img src='https://a2.muscache.com/defaults/user_pic-50x50.png?v=2' />
+                        </div>
+                        <div className='comment-content'>
+                            <div className='commenter'>Robert</div>
+                            <div>
+                                Bonjour à tous, je vous recommande le site de Camaret, il
+                                y a une grande diversité d’espèces, palourdes, coques,
+                                couteaux, et même bigorneaux et huîtres dans les
+                                rochers, et le tout dans un environnement préservé…
+                            </div>
+                        </div>
+                    </div>
+                    <h1>J'aime mon site</h1>
+                    <div>
+                        <div>Les milieux présents</div>
+                        <ul>
+                            <li>Champ de bloc</li>
+                            <li>Herbier de zostères</li>
+                        </ul>
+                        <div>Pour évaluer votre site pensez à regarder</div>
+                        <ul>
+                            <li>• Les pollutions [?]</li>
+                            <li>• Les blocs retournés[?]</li>
+                        </ul>
+                        <div>Si vous souhaitez aider la science</div>
+                        <ul>
+                            <li>• Programme [http://www.asso-apecs.org/Principes-du-programme.html Capoera]</li>
+                            <li>• Programme [http://www.biolit.fr/ Biolit]</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         );
