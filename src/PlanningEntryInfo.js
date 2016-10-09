@@ -52,12 +52,18 @@ class Planning extends Component {
                         </div>
                     </div>
                     <h1>Bonne pratiques</h1>
+                        <div className='species-container'>
+                        <div> Site référent pour la peche a pied: <a href='http://www.pecheapied-responsable.fr/'> pêche à pied responsable</a> </div>
+
+
+
+                        </div>
                 </div>
             </div>
         );
     }
 }
-
+                        // <div> une vidéo <video><source='http://www.pecheapied-responsable.fr/' type="video/mp4"></video></div>
 function getSpecies() {
     return [
         { name: 'Tourteau'
@@ -107,6 +113,13 @@ function getSpecies() {
         , quantity: '300 /jour (env. 3 kg) /pêcheur'
         , how: 'Griffe à dents, couteau'
         , image: moule
+        }
+    ];
+}
+
+function getPratiques() {
+    return [
+        { nom: 'peche à pied'
         }
     ];
 }
