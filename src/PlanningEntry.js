@@ -52,6 +52,13 @@ class Planning extends Component {
                 // opacity: 0.2,
         }).addTo(map);
 
+        var herbier = window.L.tileLayer.wms('http://www.ifremer.fr/services/wms/biologie', {
+                layers: 'IFR_SUIVI_HERBIER_BZH_2007_P',
+                format: 'image/png',
+                transparent: true,
+                // opacity: 0.2,
+        }).addTo(map);
+
         //légende associée
 
         var legend = window.L.control({position: 'bottomright'});
@@ -60,7 +67,7 @@ class Planning extends Component {
 
             var div = window.L.DomUtil.create('div', 'info legend');
             div.innerHTML = "<img src = 'http://geosu-iuem.univ-brest.fr/geoserver/LETG-BREST/wms?service=wms&request=GetLegendGraphic&VERSION=1.1.1&FORMAT=image/png&WIDTH=15&HEIGHT=15&layer=comer_especes'>";
-            div.innerHTML = "<img src = './legende.png'>";
+            div.innerHTML += "<img src = './legende.png'>";
             return div;
         };
 
