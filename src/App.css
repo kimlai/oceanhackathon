@@ -52,8 +52,15 @@ body.poulpe {
     width: 280px;
 }
 
+.search-what {
+    width: 280px;
+}
+
 @media screen and (max-width: 400px) {
     .search-when {
+        width: 100%;
+    }
+    .search-what {
         width: 100%;
     }
 }
@@ -508,6 +515,7 @@ nav a {
         z-index: 99;
         justify-content: left;
         border-top: 1px solid rgb(200, 200, 200);
+        border-bottom: none;
     }
 
     .logo {
@@ -530,5 +538,33 @@ nav a {
         padding: 12px;
         vertical-align: middle;
         margin: 0;
+    }
+}
+
+.search-form-container {
+    background: white;
+}
+
+.activities {
+    width: 100%;
+    max-width: 819px;
+    padding: 24px;
+    background: white;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.activities input {
+    padding: 6px;
+}
+
+.activities label {
+    padding-right: 6px;
+}
+
+@media screen and (max-width: 400px) {
+    .activities {
+        flex-direction: column;
     }
 }
