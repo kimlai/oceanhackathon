@@ -76,9 +76,9 @@ class Planning extends Component {
                         <li>XI – avant de les consommer les coquillages dégorger tu feras</li>
                     </ul>
                     <h2>Comment pêcher la moule</h2>
-                    <iframe frameborder="0" width="480" height="270" src="//www.dailymotion.com/embed/video/x4sort4" allowfullscreen></iframe>
+                    <iframe frameborder="0" width="370" height="270" src="//www.dailymotion.com/embed/video/x4sort4" allowfullscreen></iframe>
                     <h2>Comment pêcher l'étrille</h2>
-                    <iframe frameborder="0" width="480" height="270" src="//www.dailymotion.com/embed/video/x4sp13q" allowfullscreen></iframe>
+                    <iframe frameborder="0" width="370" height="270" src="//www.dailymotion.com/embed/video/x4sp13q" allowfullscreen></iframe>
                     <h1>Communauté</h1>
                     <div className='comment'>
                         <div className='avatar'>
