@@ -5,36 +5,31 @@ class Feedback extends Component {
     render() {
         return (
             <div>
-                <Navigation />
-        	<div>
-                    <h1>Carnet de pêche</h1>
-                    <div> Ma dernière sortie </div>
-                    <li> Aucune information sur la dernière sortie. </li><br/>
-                    <button id = "renseigner"> renseigner </button>
-                 </div>
-                 <br/><br/>
-                 <div>
-                    <h1>Mes anciennes sorties</h1>
-                    <div> Sortie du: ... au ... </div>
-                    <li> Observations: ... </li>
-                    <li> Butin / carnet de pêche: ... </li><br/>
-                    <button id = "see_more"> Voir + </button>
+                <Navigation  />
+                <div className='planning-container'>
+                    <header>Vos sorties passées</header>
+                    <div className='planning-entry'>
+                        <div className='date'>30 Septembre 2016</div>
+                        <div>Lanildut</div>
+                        <button>
+                            <a href='/index.html' className='see-planning-entry'>Voir</a>
+                        </button>
+                    </div>
+                    <div className='planning-entry'>
+                        <div className='date'>14 Septembre 2016</div>
+                        <div>Lanildut</div>
+                        <button>
+                            <a href='/index.html' className='see-planning-entry'>Voir</a>
+                        </button>
+                    </div>
+                    <div className='planning-entry'>
+                        <div className='date'>10 Septembre 2016</div>
+                        <div>Camaret</div>
+                        <button>
+                            <a href='/index.html' className='see-planning-entry'>Voir</a>
+                        </button>
+                    </div>
                 </div>
-                <br/>
-                    <button id = "home"> Planifier une nouvelle sortie </button>
-                 <br/><br/>
-                 <br/><br/>
-                <div>
-                    <h1> + D'infos sur mes zones de pêche </h1>
-                    <button>Gestion</button>
-                    <span class="spacer"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                    <button> Enjeux patrimoine nat.</button>
-                    <br/><br/>
-                    <button> Enjeux patrimoine culturel</button>
-                    <span class="spacer">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                    <button>La pêche au siècle dernier</button>
-                </div>
-                <br/>
             </div>
         );
     }
