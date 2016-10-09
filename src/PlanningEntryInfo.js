@@ -11,6 +11,8 @@ import crevette from './images/Crevette.png';
 import etrille from './images/Etrille.png';
 import bigorneau from './images/Bigorneau.png';
 import biohazard from './images/biohazard.png';
+import bloc from './images/champ.png';
+import herbier from './images/herbier.png';
 
 class Planning extends Component {
     render() {
@@ -111,8 +113,20 @@ class Planning extends Component {
                     <div>
                         <h2>Les milieux présents</h2>
                         <ul>
-                            <li>• Champ de bloc</li>
-                            <li>• Herbier de zostères</li>
+                            <li>
+                                <div>• Champ de bloc</div>
+                                <div className='blocs'>
+                                    <img src={bloc} width={48} height={48} />
+                                    <div className='text'>L’état des champs de blocs du tableau de bord du parc naturel marin d’Iroise en 2015, estimé à partir de l’indice visuel de retournement des blocs, est « moyen ». cette dégradation de notre indicateur est probablement liée aux tempêtes de l’hiver qui ont énormément remanié les blocs.</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>• Herbier de zostères</div>
+                                <div className='blocs'>
+                                    <img src={herbier} width={48} height={48} />
+                                    <div className='herbier'>Les herbiers marins poussent dans les zones sableuses ou vaseuses. Ils ont une croissance très lente et se restaurent difficilement.</div>
+                                </div>
+                            </li>
                         </ul>
                         <h2>Pour évaluer votre site pensez à regarder</h2>
                         <ul>

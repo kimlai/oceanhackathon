@@ -629,3 +629,22 @@ nav a {
     margin-right: 12px;
     margin-bottom: 6px;
 }
+
+.blocs {
+    display: flex;
+    padding: 12px;
+}
+
+.blocs img {
+    margin: 12px;
+}
+
+.blocs .text {
+    padding: 12px;
+    font-size: 16px;
+}
+
+.herbier {
+    padding: 12px;
+    font-size: 16px;
+}
