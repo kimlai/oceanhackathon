@@ -46,6 +46,7 @@ class Planning extends Component {
                         </div>
                     </div>
                 </div>
+                <div><a target='_blank' href='http://www.pecheapied-responsable.fr/'>☣ Consulter l'état sanitaire du site</a></div>
                 <div className='single-planning-entry-snd-row'>
                     <div className='single-planning-entry-species'>
                         <h1>Les espèces que vous pouvez rencontrer</h1>
@@ -56,7 +57,6 @@ class Planning extends Component {
                         </div>
                     </div>
                     <h1>Quelques conseils</h1>
-                    <div> Site référent pour la peche a pied: <a target='_blank' href='http://www.pecheapied-responsable.fr/'> pêche à pied responsable</a> </div>
                     <ul>
                         <li>I – les rochers tels que tu les as trouvés tu remettras</li>
                         <li>II – les zones des pêches autorisées tu respecteras</li>
@@ -125,7 +125,7 @@ class Planning extends Component {
         );
     }
 }
-                        // <div> une vidéo <video><source='http://www.pecheapied-responsable.fr/' type="video/mp4"></video></div>
+
 function getSpecies() {
     return [
         { name: 'Tourteau'
