@@ -9,7 +9,7 @@ html {
 
 h3 {
 	font-family: verdana;
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: bold;
 	line-height: 100%;
 }
@@ -32,6 +32,18 @@ p {
 	font-size:	12px;
 	margin:0px;
 	padding:0px;
+}
+input, button {
+    background-color: rgb(180, 200, 220); /* Green */
+    border: none;
+    color: black;
+    padding: 5px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: 2px ridge;
+    border-radius: 25px;
 }
 
 br{
