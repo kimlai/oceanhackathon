@@ -380,6 +380,15 @@ button:disabled {
     padding: 18px;
 }
 
+.wheather-info {
+    float: right;
+    padding-top: 36px;
+}
+
+.temperature {
+    font-size: 36px;
+}
+
 .species {
     background: white;
     padding: 24px;

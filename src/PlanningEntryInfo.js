@@ -40,6 +40,10 @@ class Planning extends Component {
                     <div className='single-planning-entry-wheather'>
                         <h1>Météo</h1>
                         <img width={180} height={180} src={cloudy} alt='cloudy' />
+                        <div className='wheather-info'>
+                            <div>Nuageux</div>
+                            <div className='temperature'>17°</div>
+                        </div>
                     </div>
                 </div>
                 <div className='single-planning-entry-snd-row'>
