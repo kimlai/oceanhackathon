@@ -67,7 +67,6 @@ class Planning extends Component {
 
             var div = window.L.DomUtil.create('div', 'info legend');
             div.innerHTML = "<img src = 'http://geosu-iuem.univ-brest.fr/geoserver/LETG-BREST/wms?service=wms&request=GetLegendGraphic&VERSION=1.1.1&FORMAT=image/png&WIDTH=15&HEIGHT=15&layer=comer_especes'>";
-            div.innerHTML += "<img src = './legende.png'>";
             return div;
         };
 
