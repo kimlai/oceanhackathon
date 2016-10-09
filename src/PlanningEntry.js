@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PlanningEntryInfo from './PlanningEntryInfo';
+import Navigation from './Navigation';
 
 class Planning extends Component {
     constructor(props) {
@@ -22,6 +23,7 @@ class Planning extends Component {
         const position = this.state.entry.location.location;
         const mapContainer = document.createElement('div');
         mapContainer.id = 'planning-entry-map-container';
+        mapContainer.style.height = (window.innerHeight - 56) + 'px';
         document.body.appendChild(mapContainer);
         const map = window.L.map('planning-entry-map-container', { scrollWheelZoom: true }).setView(position, 13);
         var mapbox = window.L.tileLayer(
@@ -84,9 +86,12 @@ class Planning extends Component {
     render() {
         const entry = this.state.entry;
         return (
-            <div className='single-planning-entry-container'>
-                <header>Votre sortie à {entry.location.label} le {entry.date}</header>
-                <PlanningEntryInfo entry={entry} />
+            <div>
+                <Navigation />
+                <div className='single-planning-entry-container'>
+                    <header>Votre sortie à {entry.location.label} le {entry.date}</header>
+                    <PlanningEntryInfo entry={entry} />
+                </div>
             </div>
         );
     }

@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import Navigation from './Navigation';
 
 class Feedback extends Component {
     render() {
         return (
             <div>
+                <Navigation />
         	<div>
                     <h1>Carnet de pêche</h1>
                     <div> Ma dernière sortie </div>

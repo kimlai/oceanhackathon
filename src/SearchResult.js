@@ -5,6 +5,7 @@ var _ = require('lodash');
 import 'rc-slider/assets/index.css';
 import tides from './tides-camaret.json'
 import TideChart from './TideChart';
+import Navigation from './Navigation';
 
 class SearchResult extends Component {
     static contextTypes = {
@@ -43,7 +44,7 @@ class SearchResult extends Component {
         const locations = groupByLocation(this.state.searchResults);
         const mapContainer = document.createElement('div');
         mapContainer.id = 'map-container';
-        mapContainer.style.height = window.innerHeight + 'px';
+        mapContainer.style.height = (window.innerHeight - 56) + 'px';
         document.body.appendChild(mapContainer);
         const map = window.L.map('map-container', { scrollWheelZoom: false }).setView(position, 13);
         window.L.tileLayer(
@@ -227,13 +228,16 @@ class SearchResult extends Component {
             );
         });
         return (
-            <div className='search-result-container'>
-                <div className='search-result-criteria'>
-                    <div>{this.state.where.label}</div>
-                    <div>-</div>
-                    <div>{this.state.when.label}</div>
+            <div>
+                <Navigation />
+                <div className='search-result-container'>
+                    <div className='search-result-criteria'>
+                        <div>{this.state.where.label}</div>
+                        <div>-</div>
+                        <div>{this.state.when.label}</div>
+                    </div>
+                    {this.renderSearchResult(inBounds, this.state.groupingCriteria)}
                 </div>
-                {this.renderSearchResult(inBounds, this.state.groupingCriteria)}
             </div>
         );
     }

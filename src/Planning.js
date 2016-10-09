@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router'
+import Navigation from './Navigation';
 
 class Planning extends Component {
     constructor(props) {
@@ -32,9 +33,12 @@ class Planning extends Component {
 
     render() {
         return (
-            <div className='planning-container'>
-                <header>Vos sorties prévues</header>
-                {this.renderPlanning(this.state.planning)}
+            <div>
+                <Navigation  />
+                <div className='planning-container'>
+                    <header>Vos sorties prévues</header>
+                    {this.renderPlanning(this.state.planning)}
+                </div>
             </div>
         );
     }

@@ -24,7 +24,7 @@ body {
 .search-form {
     display: flex;
     justify-content: center;
-    margin-top: 10%;
+    padding-top: 10%;
 }
 
 @media screen and (max-width: 400px) {
@@ -142,7 +142,7 @@ button:disabled {
  *******************/
 
 .search-result-container {
-    padding: 48px;
+    padding: 100px 48px 100px 48px;
     width: 50%;
 }
 
@@ -274,7 +274,7 @@ button:disabled {
 
 #map-container {
     position: fixed;
-    top: 0;
+    top: 56px;
     right: 0;
     width: 50%;
     float: right;
@@ -293,7 +293,7 @@ button:disabled {
  *********************/
 
 .planning-container {
-    padding: 72px;
+    padding: 118px 72px;
 }
 
 @media screen and (max-width: 400px) {
@@ -406,11 +406,8 @@ table.species-info td {
 }
 
 .single-planning-entry-container {
-    padding: 36px 0px 36px 72px;
-    margin-top: 570px;
-    margin-left: 72px;
-    margin-right: 72px;
-    margin-bottom: 72px;
+    width: 60%;
+    padding: 100px 36px 36px 36px;
 }
 
 @media screen and (max-width: 400px) {
@@ -424,9 +421,51 @@ table.species-info td {
 }
 
 #planning-entry-map-container {
-    position: absolute;
-    top: 0;
-    height: 570px;
+    position: fixed;
+    top: 56px;
     right: 0;
+    width: 40%;
+    float: right;
+}
+@media screen and (max-width: 400px) {
+    #planning-entry-map-container {
+        display: block;
+        width: 100%;
+        position: relative;
+    }
+}
+
+nav {
+    display: flex;
     width: 100%;
+    position: fixed;
+    background: white;
+    z-index: 99;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(200, 200, 200);
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.nav-one,
+.nav-two {
+    display: flex;
+}
+
+.nav-one > * {
+    margin-right: 36px;
+    font-size: 16px;
+    padding: 18px;
+}
+
+.nav-two > * {
+    margin-left: 36px;
+    padding: 18px;
+    font-size: 16px;
+}
+
+.logo {
+    padding: 9px 0px 2px 18px;
 }
