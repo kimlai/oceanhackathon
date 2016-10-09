@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="carnet-de-peche.css" />
     
     <!--
       Notice the use of %PUBLIC_URL% in the tag above.
@@ -23,33 +23,31 @@
   <body>
     <div id="app">
         <div id="root">
-                    <div>
-                    <h0>Carnet de pêche</h0>
-                    <div> Ma dernière sortie </div>
-                    <li> Aucune information sur la dernière sortie. </li><br/>
-                    <button id = "renseigner"> renseigner </button>
+                  <div>
+                    <h1>Carnet de pêche</h1>
+                    <div> Ma dernière sortie </div> <br/>
+                    Aucune information sur la dernière sortie
+                    <button id = "renseigner"> renseigner </button><br/>
                  </div>
                  <br/><br/>
                  <div>
-                    <h1>Mes anciennes sorties</h1>
-                    <div> Sortie du: 15/09/2016 </div>
-                    <li> Observations: ... </li>
-                    <li> Butin / carnet de pêche: ... </li><br/>
-                    <button id = "see_more"> Voir + </button>
+                    <h2>Mes anciennes sorties</h2>
+                    
+                    <table id = "table">
+                      <tr><th>Sortie du: 15/09/2016&nbsp;</th><th><form action = "ancienne sortie de pêche.pdf"><input type="submit" value="Plus d'infos"/></form></th></tr>
+                      <tr><th>Sortie du: 03/01/2016</th><th><form action = "ancienne sortie de pêche.pdf"><input type="submit" value="Plus d'infos"/></form></th></tr>
+                    </table>
                 </div>
                 <br/>
-                    <button id = "home"> Planifier une nouvelle sortie </button>
-                 <br/><br/>
+                    <form action = "http://oceanhackathon.herokuapp.com/#/?_k=c4yulj"><input type="submit" value="Planifier une nouvelle sortie"/></form>
                  <br/><br/>
                 <div>
-                    <h1> + D'infos sur mes zones de pêche </h1>
-                    <button>Gestion</button>
+                    <h2> + D'infos sur mes zones de pêche </h2>
+                    <form action = "http://www.parc-marin-iroise.fr/Activites-de-loisirs/Peche-de-loisir"><input type="submit" value="Pêche responsable"/>
                     <span class="spacer"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                     <button> Enjeux patrimoine nat.</button>
                     <br/><br/>
                     <button> Enjeux patrimoine culturel</button>
-                    <span class="spacer">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                    <button>La pêche au siècle dernier</button>
                 </div>
                 <br/><br/>
 
@@ -57,10 +55,9 @@
                 <div>
                     <h1> Une observation particulière? </h1>
                     <h2> J'aimerais connaitre le nom d'une espèce rencontrée </h2>
-                    <ul>
-                      <li><input type = "text"/> <button> search </button> </li> 
-                      <li> télécharger une photo <button> Upload </button> </li>
-                    </ul>
+                      <input type = "text"/> <button> search </button> <br/>
+                      télécharger une photo <button> Upload </button> <br/>
+                    </div>
                     <h2> J'ai constaté une pollution </h2>
                     <ul>
                       <li> Bloom d'algues <a href = 'http://www.phenomer.org/Participer/Je-communique-mon-observation'> Signaler </a>  </li>
