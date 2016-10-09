@@ -28,9 +28,10 @@ class Planning extends Component {
         const onlyCoeffs = _.filter(coeffs, (coef) => { return typeof coef !== 'undefined' });
         return (
             <div>
+                <h1>Conditions</h1>
                 <div className='single-planning-entry-fst-row'>
                     <div className='single-planning-entry-tide'>
-                        <h1>Marée ({onlyCoeffs.join(', ')})</h1>
+                        <h2>Marée ({onlyCoeffs.join(', ')})</h2>
                         <TideChart
                             width={400}
                             data={tidesOfDay}
@@ -38,7 +39,7 @@ class Planning extends Component {
                         />
                     </div>
                     <div className='single-planning-entry-wheather'>
-                        <h1>Météo</h1>
+                        <h2>Météo</h2>
                         <img width={180} height={180} src={cloudy} alt='cloudy' />
                         <div className='wheather-info'>
                             <div>Nuageux</div>
@@ -48,7 +49,7 @@ class Planning extends Component {
                 </div>
                 <div className='single-planning-entry-snd-row'>
                     <div className='single-planning-entry-species'>
-                        <h1>Les espèces que vous allez rencontrer</h1>
+                        <h1>Les espèces que vous pouvez rencontrer</h1>
                         <div className='species-container'>
                             {getSpecies().map((species) => {
                                 return <Species species={species} />

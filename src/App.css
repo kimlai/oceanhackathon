@@ -373,16 +373,37 @@ button:disabled {
  *************************/
 
 .single-planning-entry-container header {
-    font-size: 36px;
-    text-align: center;
+    font-size: 24px;
     margin-bottom: 48px;
+}
+
+.single-planning-entry-container h1 {
+    font-size: 36px;
+    border-bottom: 2px solid;
+    font-weight: normal;
+    margin-bottom: 48px;
+    padding-bottom: 9px;
+    min-width: 400px;
+    width: auto;
+}
+
+.single-planning-entry-container h1 + div {
+    clear: both;
 }
 
 @media screen and (max-width: 400px) {
     .single-planning-entry-container header {
         font-size: 24px;
     }
-    .single-planning-entry-container {
+    .single-planning-entry-container h1 {
+        float: none;
+        font-size: 24px;
+        text-align: left;
+        border-bottom: 2px solid;
+        font-weight: normal;
+        margin-bottom: 48px;
+        padding-bottom: 9px;
+        min-width: 0px;
     }
 }
 
@@ -435,6 +456,7 @@ button:disabled {
 .species-container {
     display: flex;
     flex-direction: column;
+    clear: both;
 }
 
 table.species-info th,
@@ -445,7 +467,7 @@ table.species-info td {
 
 .single-planning-entry-container {
     width: 60%;
-    padding: 100px 36px 36px 36px;
+    padding: 100px 36px 36px 48px;
 }
 
 @media screen and (max-width: 400px) {
@@ -453,6 +475,11 @@ table.species-info td {
         margin-left: 0px;
         margin-right: 0px;
         width: 100%;
+        padding: 12px;
+    }
+    .single-planning-entry-container header {
+        font-size: 18px;
+        text-align: left;
     }
     .single-planning-entry-fst-row {
         flex-direction: column;
