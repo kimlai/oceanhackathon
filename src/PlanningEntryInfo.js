@@ -100,17 +100,17 @@ class Planning extends Component {
                     </div>
                     <h1>J'aime mon site</h1>
                     <div>
-                        <div>Les milieux présents</div>
+                        <h2>Les milieux présents</h2>
                         <ul>
-                            <li>Champ de bloc</li>
-                            <li>Herbier de zostères</li>
+                            <li>• Champ de bloc</li>
+                            <li>• Herbier de zostères</li>
                         </ul>
-                        <div>Pour évaluer votre site pensez à regarder</div>
+                        <h2>Pour évaluer votre site pensez à regarder</h2>
                         <ul>
                             <li>• Les pollutions [?]</li>
                             <li>• Les blocs retournés[?]</li>
                         </ul>
-                        <div>Si vous souhaitez aider la science</div>
+                        <h2>Si vous souhaitez aider la science</h2>
                         <ul>
                             <li>• Programme [http://www.asso-apecs.org/Principes-du-programme.html Capoera]</li>
                             <li>• Programme [http://www.biolit.fr/ Biolit]</li>
