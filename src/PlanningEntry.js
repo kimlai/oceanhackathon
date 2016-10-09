@@ -52,12 +52,12 @@ class Planning extends Component {
                 // opacity: 0.2,
         }).addTo(map);
 
-        var herbier = window.L.tileLayer.wms('http://www.ifremer.fr/services/wms/biologie', {
-                layers: 'IFR_SUIVI_HERBIER_BZH_2007_P',
-                format: 'image/png',
-                transparent: true,
-                // opacity: 0.2,
-        }).addTo(map);
+        //var herbier = window.L.tileLayer.wms('http://www.ifremer.fr/services/wms/biologie', {
+        //        layers: 'IFR_SUIVI_HERBIER_BZH_2007_P',
+        //        format: 'image/png',
+        //        transparent: true,
+        //        // opacity: 0.2,
+        //}).addTo(map);
 
         //légende associée
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Router, Route, browserHistory } from 'react-router';
+import { Router, Route, hashHistory} from 'react-router';
 import 'react-select/dist/react-select.css';
 import './App.css';
 import Search from './Search';
@@ -20,7 +20,7 @@ class App extends Component {
 
     render() {
         return (
-            <Router history={browserHistory}>
+            <Router history={hashHistory}>
                 <Route
                     path='/'
                     component={Search}
