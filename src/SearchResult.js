@@ -52,7 +52,7 @@ class SearchResult extends Component {
             { maxZoom: 18 })
         .addTo(map);
         //modif chojnacki
-        var especes = window.L.tileLayer.wms('http://geosu-iuem.univ-brest.fr/geoserver/LETG-BREST/wms', {
+        window.L.tileLayer.wms('http://geosu-iuem.univ-brest.fr/geoserver/LETG-BREST/wms', {
                 layers: 'comer_especes',
                 format: 'image/png',
                 transparent: true,
@@ -367,7 +367,6 @@ function groupByDate(results, maxCoeff) {
     });
 
     const onlyMatchingCoeff = _.filter(grouped, (result) => {
-        console.log(result.tides);
         return _.some(result.tides, (tide) => {
             return tide.coef >= maxCoeff;
         });
