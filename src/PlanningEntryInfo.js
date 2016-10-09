@@ -10,6 +10,7 @@ import moule from './images/Moule.png';
 import crevette from './images/Crevette.png';
 import etrille from './images/Etrille.png';
 import bigorneau from './images/Bigorneau.png';
+import biohazard from './images/biohazard.png';
 
 class Planning extends Component {
     render() {
@@ -46,7 +47,11 @@ class Planning extends Component {
                         </div>
                     </div>
                 </div>
-                <div><a target='_blank' href='http://www.pecheapied-responsable.fr/'>☣ Consulter l'état sanitaire du site</a></div>
+                <div>
+                    <img className='biohazard' width={24} height={24} src={biohazard} />
+                    <a target='_blank' href='http://www.pecheapied-responsable.fr/'>  Consulter l'état sanitaire du site</a>
+                    <img className='biohazard' width={24} height={24} src={biohazard} />
+                </div>
                 <div className='single-planning-entry-snd-row'>
                     <div className='single-planning-entry-species'>
                         <h1>Les espèces que vous pouvez rencontrer</h1>
