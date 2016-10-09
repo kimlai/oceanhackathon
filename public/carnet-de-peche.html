@@ -25,47 +25,37 @@
         <div id="root">
                   <div>
                     <h1>Carnet de pêche</h1>
-                    <div> Ma dernière sortie </div> <br/>
-                    Aucune information sur la dernière sortie
-                    <button id = "renseigner"> renseigner </button><br/>
+                    <table id = "table1">
+                      <tr><th>Ma dernière sortie &nbsp;</th><th><form action = "ancienne sortie de pêche.pdf"><input type="submit" value="Renseigner"/></form></th></tr>
+                    </table>
                  </div>
-                 <br/><br/>
                  <div>
                     <h2>Mes anciennes sorties</h2>
                     
-                    <table id = "table">
+                    <table id = "table2">
                       <tr><th>Sortie du: 15/09/2016&nbsp;</th><th><form action = "ancienne sortie de pêche.pdf"><input type="submit" value="Plus d'infos"/></form></th></tr>
                       <tr><th>Sortie du: 03/01/2016</th><th><form action = "ancienne sortie de pêche.pdf"><input type="submit" value="Plus d'infos"/></form></th></tr>
                     </table>
                 </div>
                 <br/>
                     <form action = "http://oceanhackathon.herokuapp.com/#/?_k=c4yulj"><input type="submit" value="Planifier une nouvelle sortie"/></form>
-                 <br/><br/>
                 <div>
-                    <h2> + D'infos sur mes zones de pêche </h2>
-                    <form action = "http://www.parc-marin-iroise.fr/Activites-de-loisirs/Peche-de-loisir"><input type="submit" value="Pêche responsable"/>
-                    <span class="spacer"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                    <button> Enjeux patrimoine nat.</button>
-                    <br/><br/>
-                    <button> Enjeux patrimoine culturel</button>
+                    <h2> Plus d'informations sur les zones de pêche </h2>
+                    <form action = "http://www.parc-marin-iroise.fr/Activites-de-loisirs/Peche-de-loisir"><input type="submit" value="Pêche responsable"/></form> <br/>
+                    <form action = "http://www.parc-marin-iroise.fr/Richesses-culturelles"><input type="submit" value="Richesse culturelle"/></form> <br/>
+                    <form action = "http://www.parc-marin-iroise.fr/Richesses-naturelles/Cotes-de-Crozon/Les-champs-de-blocs"><input type="submit" value="Richesse naturelle"/></form> <br/>
                 </div>
-                <br/><br/>
-
-
                 <div>
-                    <h1> Une observation particulière? </h1>
-                    <h2> J'aimerais connaitre le nom d'une espèce rencontrée </h2>
-                      <input type = "text"/> <button> search </button> <br/>
-                      télécharger une photo <button> Upload </button> <br/>
+                    <h2> Une observation particulière? </h2>
+                    <li> Envoyer une image <input type = "file"/> <button> Envoyer </button> </li>
                     </div>
-                    <h2> J'ai constaté une pollution </h2>
+                    <h3> J'ai constaté une pollution </h3>
                     <ul>
                       <li> Bloom d'algues <a href = 'http://www.phenomer.org/Participer/Je-communique-mon-observation'> Signaler </a>  </li>
                       <li> Pollution <a href = 'http://www.phenomer.org/Participer/Je-communique-mon-observation'> Signaler </a>   </li>
                     </ul>
-                    <h2> J'ai constaté un animal mort / échoué </h2>
+                    <h3> J'ai constaté un animal mort / échoué </h3>
                     <ul>
-                    <li> télécharger une photo <button> Upload </button> </li>
                     <li> <a href = 'http://www.phenomer.org/Participer/Je-communique-mon-observation'> Signaler </a>   </li>
                     </ul>
                 </div>

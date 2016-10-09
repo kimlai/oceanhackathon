@@ -46,12 +46,22 @@ br{
 	font-size: 12px;
 }
 
-#table {
+#table1 {
 	top: 1px;
 	left: 1px;
 	background-color: #eeeeFF;
 	border-radius: 10px;
-	border: 2px solid #7777CC;
+	border: 2px solid #AA7777;
+	margin:3px;
+	padding:5px;
+}
+
+#table2 {
+	top: 1px;
+	left: 1px;
+	background-color: #eeeaFF;
+	border-radius: 10px;
+	border: 2px solid #aaaaDD;
 	margin:3px;
 	padding:5px;
 }
